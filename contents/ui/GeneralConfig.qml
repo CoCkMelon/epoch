@@ -42,6 +42,8 @@ Item {
                 from: 0
                 to: 100
                 stepSize: 10
+                editable: true
+                validator: IntValidator { bottom: 0; top: 100 }
                 onValueChanged: configRoot.configurationChanged()
             }
 
