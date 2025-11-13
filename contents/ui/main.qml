@@ -125,7 +125,8 @@ PlasmoidItem {
         // Time display (16:20)
         Item {
             id: timeContainer
-            width: childrenRect.width
+            // Width only accounts for time digits, not seconds (so seconds don't push time around)
+            width: timeRow.width
             height: childrenRect.height
             anchors.left: base.left
             anchors.leftMargin: base.pad
