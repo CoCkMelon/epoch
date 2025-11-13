@@ -52,32 +52,49 @@ PlasmoidItem {
         id: mainContainer
         width: plasmoid.width
         height: plasmoid.height
+        // Request enough width to fit content, so panel pushes neighbors
+        implicitWidth: timeContainer.width + base.pad * 2
+        // Also tell the panel via Layout hints
+        Layout.preferredWidth: base.width
+        Layout.minimumWidth: base.width
+        property bool smallPanel: height <= 22
         
         // Allow glow to overflow outside plasmoid
         clip: false
+
+        // Executable runner for click actions
+        Plasma5Support.DataSource {
+            id: exec
+            engine: "executable"
+        }
         
         // Main rectangle with glow - this is now the only box
         Rectangle {
             id: base
-            property int overflowBottom: 16 // push bottom glow below panel
             property int pad: 1
-            width: timeContainer.width + pad * 2 // pad left and right
-            height: mainContainer.height + overflowBottom
+            width: timeContainer.width + pad * 2 // based on content; panel will allocate width
+            // Height and position include user-configured overflow
+            height: mainContainer.height + plasmoid.configuration.overflowTop + plasmoid.configuration.overflowBottom
             radius: height/10
             anchors.left: parent.left
             anchors.top: parent.top
-            color: "#00001B"  // Dark purple-blue interior
+            anchors.topMargin: -plasmoid.configuration.overflowTop
+            // Background rectangle visibility
+            color: plasmoid.configuration.enableRect ? "#00001B" : "transparent"
+            border.color: "#9747c7"
+            border.width: (!plasmoid.configuration.enableRect && plasmoid.configuration.enableGlow) ? 1 : 0
             
-            // Purple glow border effect
-            layer.enabled: true
+            // Glow
+            layer.enabled: plasmoid.configuration.enableGlow
             layer.effect: Glow {
-                radius: 15
-                samples: 24
-                color: "#9747c7"  // Purple glow color from screenshot
-                spread: 0.2
+                radius: Math.max(6, Math.round(height * 0.30))
+                samples: Math.floor(height/2)
+                color: "#9747c7"
+                spread: 0.30
             }
         }
         
+
         // Time display (16:20)
         Item {
             id: timeContainer
@@ -86,12 +103,23 @@ PlasmoidItem {
             anchors.left: base.left
             anchors.leftMargin: base.pad
             anchors.verticalCenter: mainContainer.verticalCenter
+            // Raise time a bit across all sizes (branch-free)
+            anchors.verticalCenterOffset: -Math.round(mainContainer.height * 0.10)
 
             // Keep width animation in sync with text width change
             Behavior on width {
                 NumberAnimation { duration: 150; easing.type: Easing.InOutBack }
             }
             
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    if (plasmoid.configuration.clickCommand && plasmoid.configuration.clickCommand.length > 0) {
+                        exec.connectSource(plasmoid.configuration.clickCommand)
+                    }
+                }
+            }
+
             Row {
                 id: timeRow
                 spacing: 0
@@ -108,7 +136,7 @@ PlasmoidItem {
                     ? String(currentDate.getHours())
                     : String(currentDate.getHours() - 12)))
                     : Qt.formatDateTime(currentDate, "HH")
-                    font.pixelSize: Math.min(mainContainer.width, mainContainer.height) * 0.65
+                    font.pixelSize: mainContainer.height * 0.65
                     font.family: metro.name
                     font.weight: Font.Bold
                     
@@ -170,8 +198,9 @@ PlasmoidItem {
                 transformOrigin: Item.TopLeft
                 rotation: 0
                 anchors.left: timeRow.right
-                anchors.top: timeRow.top
-                anchors.topMargin: -8 + bounceOffset
+                // Anchor to base top so it sits below the glow edge across sizes
+                anchors.top: base.top
+                anchors.topMargin: Math.round(mainContainer.height * 0.20) + bounceOffset
 
                 // Spring animations
                 SpringAnimation {
@@ -212,13 +241,13 @@ PlasmoidItem {
             horizontalAlignment: Text.AlignLeft
             property var currentDate: hora.currentDate
             text: Qt.formatDateTime(currentDate, "ddd d M yy")
-            font.pixelSize: Math.min(mainContainer.width, mainContainer.height) * 0.32
+            font.pixelSize: mainContainer.height * 0.32
             font.family: hora.font.family
             color: "#CC73E1"  // Light purple
             anchors.left: mainContainer.left
             anchors.leftMargin: base.pad
             anchors.top: timeContainer.bottom
-            anchors.topMargin: -4
+            anchors.topMargin: 0
         }
 
         Timer {

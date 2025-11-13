@@ -4,19 +4,36 @@
       xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
       http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
   <kcfgfile name=""/>
-
   <group name="General">
+
 	<entry name="opacity" type="Int">
 		<default>100</default>
 	</entry>
     <entry name="customColor" type="string">
       <default>#ffffff</default>
-      </entry>
-      <entry name="hourFormat" type="bool">
-        <default>false</default>
-      </entry>
-      <entry name="activeText" type="bool">
-        <default>false</default>
-      </entry>
+    </entry>
+    <entry name="hourFormat" type="bool">
+      <default>false</default>
+    </entry>
+    <entry name="activeText" type="bool">
+      <default>false</default>
+    </entry>
+
+    <!-- New settings -->
+    <entry name="enableGlow" type="bool">
+      <default>true</default>
+    </entry>
+    <entry name="enableRect" type="bool">
+      <default>true</default>
+    </entry>
+    <entry name="overflowTop" type="Int">
+      <default>0</default>
+    </entry>
+    <entry name="overflowBottom" type="Int">
+      <default>16</default>
+    </entry>
+    <entry name="clickCommand" type="string">
+      <default></default>
+    </entry>
   </group>
 </kcfg>
