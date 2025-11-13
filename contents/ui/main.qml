@@ -99,8 +99,8 @@ PlasmoidItem {
         Rectangle {
             id: base
             property int pad: 1
-            // Width accounts for time and date, but not seconds overflow
-            width: Math.max(timeRow.width, dateText.width) + pad * 2
+            // Width accounts for time+seconds and date, use whichever is wider
+            width: Math.max(timeRow.width + segundos.width, dateText.implicitWidth) + pad * 2
             // Height and position include user-configured overflow
             height: mainContainer.height + plasmoid.configuration.overflowTop + plasmoid.configuration.overflowBottom
             radius: height/10
@@ -269,7 +269,7 @@ PlasmoidItem {
         // Date display centered below time
         Text {
             id: dateText
-            width: base.width
+            width: base.width - base.pad * 2
             horizontalAlignment: Text.AlignLeft
             property var currentDate: hora.currentDate
             text: Qt.formatDateTime(currentDate, plasmoid.configuration.customDateFormat || "ddd d M yy")
