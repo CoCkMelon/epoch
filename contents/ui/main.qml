@@ -99,8 +99,8 @@ PlasmoidItem {
         Rectangle {
             id: base
             property int pad: 1
-            // Width based only on time row (excludes seconds) to prevent expansion
-            width: timeRow.width + pad * 2
+            // Width accounts for time and date, but not seconds overflow
+            width: Math.max(timeRow.width, dateText.width) + pad * 2
             // Height and position include user-configured overflow
             height: mainContainer.height + plasmoid.configuration.overflowTop + plasmoid.configuration.overflowBottom
             radius: height/10
@@ -219,22 +219,21 @@ PlasmoidItem {
         
         // Seconds as superscript (outside timeContainer so it doesn't affect width)
         Text {
-                id: segundos
-                property var currentDate: hora.currentDate
-                // Bounce/rotation state
-                property real bounceOffset: 0
-                property int rotSign: 1
-                text: Qt.formatDateTime(currentDate, "ss")
-                font.pixelSize: hora.font.pixelSize * 0.44
-                font.family: hora.font.family
-                font.weight: Font.Bold
-                color: plasmoid.configuration.secondsColor
-                transformOrigin: Item.TopLeft
-                rotation: 0
-                anchors.left: timeRow.right
-                // Keep seconds inside rect without cross-parent anchors
-                anchors.top: timeRow.top
-                anchors.topMargin: Math.round(mainContainer.height * 0.10) + bounceOffset
+            id: segundos
+            property var currentDate: hora.currentDate
+            // Bounce/rotation state
+            property real bounceOffset: 0
+            property int rotSign: 1
+            text: Qt.formatDateTime(currentDate, "ss")
+            font.pixelSize: hora.font.pixelSize * 0.44
+            font.family: hora.font.family
+            font.weight: Font.Bold
+            color: plasmoid.configuration.secondsColor
+            transformOrigin: Item.TopLeft
+            rotation: 0
+            // Position relative to timeContainer + timeRow
+            x: timeContainer.x + timeRow.width
+            y: timeContainer.y + Math.round(mainContainer.height * 0.10) + bounceOffset
 
                 // Spring animations
                 SpringAnimation {
