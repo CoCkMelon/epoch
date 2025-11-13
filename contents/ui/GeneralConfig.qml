@@ -8,16 +8,16 @@ Item {
 
     signal configurationChanged
 
-    property string cfg_hourColorTop
-    property string cfg_hourColorBottom
-    property string cfg_colonColor
-    property string cfg_minuteColorTop
-    property string cfg_minuteColorBottom
-    property string cfg_secondsColor
-    property string cfg_dateColor
-    property string cfg_prefixColor
-    property string cfg_rectColor
-    property string cfg_glowColor
+    property string cfg_hourColorTop: "#78C3FB"
+    property string cfg_hourColorBottom: "#3A66F9"
+    property string cfg_colonColor: "#DDDDDD"
+    property string cfg_minuteColorTop: "#F9A55A"
+    property string cfg_minuteColorBottom: "#F25576"
+    property string cfg_secondsColor: "#4DD8C8"
+    property string cfg_dateColor: "#CC73E1"
+    property string cfg_prefixColor: "#AAAAAA"
+    property string cfg_rectColor: "#00001B"
+    property string cfg_glowColor: "#9747c7"
     property alias cfg_hourFormat: horsFormat.checked
     property alias cfg_activeText: activeText.checked
 
@@ -34,7 +34,7 @@ Item {
         property var dialog
         
         // Bind button color to config value
-        color: configRoot["cfg_" + configProp] || "#000000"
+        color: configRoot["cfg_" + configProp]
         border.color: "#B3FFFFFF"
         border.width: 1
         width: 64
@@ -57,10 +57,11 @@ Item {
                 ColorDialog { options: ColorDialog.ShowAlphaChannel }
             ', parent)
             dialog.accepted.connect(function() {
-                // Update config property as string (hex with alpha)
-                var c = dialog.selectedColor
-                configRoot["cfg_" + parent.configProp] = c.toString()
+                // Update config property
+                configRoot["cfg_" + parent.configProp] = dialog.selectedColor.toString()
                 configRoot.configurationChanged()
+                // Force button to update
+                parent.color = Qt.binding(function() { return configRoot["cfg_" + parent.configProp] })
             })
         }
     }
