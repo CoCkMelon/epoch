@@ -1,0 +1,43 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Get version from metadata.json
+      id: get_version
+      run: |
+        VERSION=$(grep '"Version"' metadata.json | sed 's/.*"\([0-9.]*\)".*/\1/')
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        echo "package_name=epoch-${VERSION}.plasmoid" >> $GITHUB_OUTPUT
+    
+    - name: Build plasmoid package
+      run: |
+        zip -r epoch-${{ steps.get_version.outputs.version }}.plasmoid contents metadata.json
+    
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: epoch-${{ steps.get_version.outputs.version }}.plasmoid
+        body: |
+          ## Epoch Clock Plasmoid v${{ steps.get_version.outputs.version }}
+          
+          ### Installation
+          ```bash
+          kpackagetool6 --type Plasma/Applet --install epoch-${{ steps.get_version.outputs.version }}.plasmoid
+          ```
+          
+          Or download and install from KDE Store: https://store.kde.org/
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
