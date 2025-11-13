@@ -51,17 +51,18 @@ Item {
         }
         
         Component.onCompleted: {
+            var prop = configProp  // Capture in local scope
             dialog = Qt.createQmlObject('
                 import QtQuick
                 import QtQuick.Dialogs
                 ColorDialog { options: ColorDialog.ShowAlphaChannel }
-            ', parent)
+            ', this)
             dialog.accepted.connect(function() {
-                // Update config property
-                configRoot["cfg_" + parent.configProp] = dialog.selectedColor.toString()
+                var propName = "cfg_" + prop
+                var colorStr = dialog.selectedColor.toString()
+                console.log("Setting", propName, "to", colorStr)
+                configRoot[propName] = colorStr
                 configRoot.configurationChanged()
-                // Force button to update
-                parent.color = Qt.binding(function() { return configRoot["cfg_" + parent.configProp] })
             })
         }
     }
