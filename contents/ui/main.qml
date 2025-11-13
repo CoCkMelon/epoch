@@ -106,12 +106,10 @@ PlasmoidItem {
             // Raise time a bit across all sizes (branch-free)
             anchors.verticalCenterOffset: -Math.round(mainContainer.height * 0.10)
 
-            // Animate width for seconds changes, but not config changes
+            // Keep width animation in sync with text width change
             Behavior on width {
-                enabled: !timeContainer.skipAnimation
                 NumberAnimation { duration: 150; easing.type: Easing.InOutBack }
             }
-            property bool skipAnimation: false
             
             MouseArea {
                 anchors.fill: parent
@@ -129,9 +127,6 @@ PlasmoidItem {
 
                 // Optional localized prefix text ("it is", "son las", etc.)
                 Text {
-                    id: prefixText
-                    width: plasmoid.configuration.activeText ? implicitWidth : 0
-                    height: plasmoid.configuration.activeText ? implicitHeight : 0
                     visible: plasmoid.configuration.activeText
                     text: root.desktoptext(root.codeleng)
                     font.pixelSize: hora.font.pixelSize * 0.35
@@ -277,20 +272,5 @@ PlasmoidItem {
             }
         }
 
-        // Force layout update when activeText toggles
-        Connections {
-            target: plasmoid.configuration
-            function onActiveTextChanged() {
-                // Disable animation temporarily so width updates instantly
-                timeContainer.skipAnimation = true
-                timeContainer.width = Qt.binding(function() { return timeContainer.childrenRect.width })
-                skipAnimTimer.restart()
-            }
-        }
-        Timer {
-            id: skipAnimTimer
-            interval: 50
-            onTriggered: timeContainer.skipAnimation = false
-        }
     }
 }
