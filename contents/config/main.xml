@@ -5,12 +5,6 @@
       http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
   <kcfgfile name=""/>
   <group name="General">
-
-	<entry name="opacity" type="Int">
-		<default>100</default>
-		<min>0</min>
-		<max>100</max>
-	</entry>
     <entry name="customColor" type="string">
       <default>#ffffff</default>
     </entry>

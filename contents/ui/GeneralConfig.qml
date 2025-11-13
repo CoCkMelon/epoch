@@ -8,7 +8,6 @@ Item {
 
     signal configurationChanged
 
-    property alias cfg_opacity: porcetageOpacity.value
     property alias cfg_customColor: colorDialog.color
     property alias cfg_hourFormat: horsFormat.checked
     property alias cfg_activeText: activeText.checked
@@ -30,22 +29,6 @@ Item {
 
         GridLayout{
             columns: 2
-
-            // Opacity
-            Label {
-                Layout.minimumWidth: configRoot.width/2
-                text: i18n("Opacity:")
-                horizontalAlignment: Text.AlignRight
-            }
-            SpinBox{
-                id: porcetageOpacity
-                from: 0
-                to: 100
-                stepSize: 10
-                editable: true
-                validator: IntValidator { bottom: 0; top: 100 }
-                onValueChanged: configRoot.configurationChanged()
-            }
 
             // Color
             Label {
