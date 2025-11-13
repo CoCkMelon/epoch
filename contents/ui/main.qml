@@ -53,14 +53,20 @@ PlasmoidItem {
         width: plasmoid.width
         height: plasmoid.height
         
+        // Allow glow to overflow outside plasmoid
+        clip: false
+        
         // Main rectangle with glow - this is now the only box
         Rectangle {
             id: base
-            width: parent.width * 0.95
-            height: parent.height * 0.85
+            property int overflowBottom: 16 // push bottom glow below panel
+            property int pad: 1
+            width: timeContainer.width + pad * 2 // pad left and right
+            height: mainContainer.height + overflowBottom
             radius: height/10
+            anchors.left: parent.left
+            anchors.top: parent.top
             color: "#00001B"  // Dark purple-blue interior
-            anchors.centerIn: parent
             
             // Purple glow border effect
             layer.enabled: true
@@ -75,16 +81,21 @@ PlasmoidItem {
         // Time display (16:20)
         Item {
             id: timeContainer
-            width: base.width
+            width: childrenRect.width
             height: childrenRect.height
-            anchors.centerIn: base
+            anchors.left: base.left
+            anchors.leftMargin: base.pad
+            anchors.verticalCenter: mainContainer.verticalCenter
+
+            // Keep width animation in sync with text width change
+            Behavior on width {
+                NumberAnimation { duration: 150; easing.type: Easing.InOutBack }
+            }
             
             Row {
                 id: timeRow
                 spacing: 0
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.left: undefined
-                anchors.right: undefined
+                anchors.left: parent.left
                 
                 // Hours with blue gradient
                 Text {
@@ -97,7 +108,7 @@ PlasmoidItem {
                     ? String(currentDate.getHours())
                     : String(currentDate.getHours() - 12)))
                     : Qt.formatDateTime(currentDate, "HH")
-                    font.pixelSize: Math.min(mainContainer.width, mainContainer.height) * 0.36
+                    font.pixelSize: Math.min(mainContainer.width, mainContainer.height) * 0.65
                     font.family: metro.name
                     font.weight: Font.Bold
                     
@@ -148,14 +159,49 @@ PlasmoidItem {
             Text {
                 id: segundos
                 property var currentDate: hora.currentDate
+                // Bounce/rotation state
+                property real bounceOffset: 0
+                property int rotSign: 1
                 text: Qt.formatDateTime(currentDate, "ss")
-                font.pixelSize: hora.font.pixelSize * 0.4
+                font.pixelSize: hora.font.pixelSize * 0.44
                 font.family: hora.font.family
                 font.weight: Font.Bold
                 color: "#4DD8C8"  // Teal
+                transformOrigin: Item.TopLeft
+                rotation: 0
                 anchors.left: timeRow.right
                 anchors.top: timeRow.top
-                anchors.topMargin: -5
+                anchors.topMargin: -8 + bounceOffset
+
+                // Spring animations
+                SpringAnimation {
+                    id: bounceAnim
+                    target: segundos
+                    property: "bounceOffset"
+                    to: 0
+                    spring: 4
+                    damping: 0.26
+                }
+                SpringAnimation {
+                    id: rotAnim
+                    target: segundos
+                    property: "rotation"
+                    to: 0
+                    spring: 4
+                    damping: 0.26
+                }
+
+                onTextChanged: {
+                    // Alternate sign for subtle wobble
+                    var s = parseInt(text)
+                    rotSign = (s % 2 === 0) ? 1 : -1
+                    // Kick values
+                    bounceOffset = -Math.round(hora.font.pixelSize * 0.16)
+                    rotation = rotSign * 10
+                    // Start springs
+                    bounceAnim.start()
+                    rotAnim.start()
+                }
             }
         }
         
@@ -163,15 +209,16 @@ PlasmoidItem {
         Text {
             id: dateText
             width: base.width
-            horizontalAlignment: Text.AlignHCenter
+            horizontalAlignment: Text.AlignLeft
             property var currentDate: hora.currentDate
-            text: Qt.formatDateTime(currentDate, "MMM, dddd d")
-            font.pixelSize: Math.min(mainContainer.width, mainContainer.height) * 0.08
+            text: Qt.formatDateTime(currentDate, "ddd d M yy")
+            font.pixelSize: Math.min(mainContainer.width, mainContainer.height) * 0.32
             font.family: hora.font.family
             color: "#CC73E1"  // Light purple
-            anchors.horizontalCenter: timeContainer.horizontalCenter
+            anchors.left: mainContainer.left
+            anchors.leftMargin: base.pad
             anchors.top: timeContainer.bottom
-            anchors.topMargin: 2
+            anchors.topMargin: -4
         }
 
         Timer {
