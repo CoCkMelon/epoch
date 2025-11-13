@@ -127,6 +127,9 @@ PlasmoidItem {
 
                 // Optional localized prefix text ("it is", "son las", etc.)
                 Text {
+                    id: prefixText
+                    width: plasmoid.configuration.activeText ? implicitWidth : 0
+                    height: plasmoid.configuration.activeText ? implicitHeight : 0
                     visible: plasmoid.configuration.activeText
                     text: root.desktoptext(root.codeleng)
                     font.pixelSize: hora.font.pixelSize * 0.35
@@ -269,6 +272,14 @@ PlasmoidItem {
                 minutos.currentDate = hora.currentDate
                 segundos.currentDate = hora.currentDate
                 dateText.currentDate = hora.currentDate
+            }
+        }
+
+        // Force layout update when activeText toggles
+        Connections {
+            target: plasmoid.configuration
+            function onActiveTextChanged() {
+                timeContainer.width = Qt.binding(function() { return timeContainer.childrenRect.width })
             }
         }
     }
