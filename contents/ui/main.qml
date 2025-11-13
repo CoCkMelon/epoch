@@ -107,8 +107,8 @@ PlasmoidItem {
             anchors.top: parent.top
             anchors.topMargin: -plasmoid.configuration.overflowTop
             // Background rectangle visibility
-            color: plasmoid.configuration.enableRect ? "#00001B" : "transparent"
-            border.color: "#9747c7"
+            color: plasmoid.configuration.enableRect ? plasmoid.configuration.rectColor : "transparent"
+            border.color: plasmoid.configuration.glowColor
             border.width: (!plasmoid.configuration.enableRect && plasmoid.configuration.enableGlow) ? 1 : 0
             
             // Glow
@@ -116,7 +116,7 @@ PlasmoidItem {
             layer.effect: Glow {
                 radius: Math.max(6, Math.round(height * 0.30))
                 samples: Math.floor(height/2)
-                color: "#9747c7"
+                color: plasmoid.configuration.glowColor
                 spread: 0.30
             }
         }
@@ -158,7 +158,7 @@ PlasmoidItem {
                     text: plasmoid.configuration.customPrefixText || root.desktoptext(root.codeleng)
                     font.pixelSize: hora.font.pixelSize * 0.35
                     font.family: hora.font.family
-                    color: "#AAAAAA"
+                    color: plasmoid.configuration.prefixColor
                     anchors.verticalCenter: parent.verticalCenter
                 }
                 
@@ -183,8 +183,8 @@ PlasmoidItem {
                         start: Qt.point(0, 0)
                         end: Qt.point(0, parent.height)
                         gradient: Gradient {
-                            GradientStop { position: 0.0; color: "#78C3FB" }  // Light blue
-                            GradientStop { position: 1.0; color: "#3A66F9" }  // Darker blue
+                            GradientStop { position: 0.0; color: plasmoid.configuration.hourColorTop }
+                            GradientStop { position: 1.0; color: plasmoid.configuration.hourColorBottom }
                         }
                     }
                 }
@@ -195,7 +195,7 @@ PlasmoidItem {
                     font.pixelSize: hora.font.pixelSize
                     font.family: hora.font.family
                     font.weight: Font.Bold
-                    color: "#DDDDDD"
+                    color: plasmoid.configuration.colonColor
                 }
                 
                 // Minutes with orange-pink gradient
@@ -213,8 +213,8 @@ PlasmoidItem {
                         start: Qt.point(0, 0)
                         end: Qt.point(0, parent.height)
                         gradient: Gradient {
-                            GradientStop { position: 0.0; color: "#F9A55A" }  // Orange
-                            GradientStop { position: 1.0; color: "#F25576" }  // Pink
+                            GradientStop { position: 0.0; color: plasmoid.configuration.minuteColorTop }
+                            GradientStop { position: 1.0; color: plasmoid.configuration.minuteColorBottom }
                         }
                     }
                 }
@@ -231,7 +231,7 @@ PlasmoidItem {
                 font.pixelSize: hora.font.pixelSize * 0.44
                 font.family: hora.font.family
                 font.weight: Font.Bold
-                color: "#4DD8C8"  // Teal
+                color: plasmoid.configuration.secondsColor
                 transformOrigin: Item.TopLeft
                 rotation: 0
                 anchors.left: timeRow.right
@@ -280,7 +280,7 @@ PlasmoidItem {
             text: Qt.formatDateTime(currentDate, "ddd d M yy")
             font.pixelSize: mainContainer.height * 0.32
             font.family: hora.font.family
-            color: "#CC73E1"  // Light purple
+            color: plasmoid.configuration.dateColor
             anchors.left: mainContainer.left
             anchors.leftMargin: base.pad
             anchors.top: timeContainer.bottom

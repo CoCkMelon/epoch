@@ -5,8 +5,38 @@
       http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
   <kcfgfile name=""/>
   <group name="General">
-    <entry name="customColor" type="string">
-      <default>#ffffff</default>
+    <!-- Time colors (with gradients) -->
+    <entry name="hourColorTop" type="string">
+      <default>#78C3FB</default>
+    </entry>
+    <entry name="hourColorBottom" type="string">
+      <default>#3A66F9</default>
+    </entry>
+    <entry name="colonColor" type="string">
+      <default>#DDDDDD</default>
+    </entry>
+    <entry name="minuteColorTop" type="string">
+      <default>#F9A55A</default>
+    </entry>
+    <entry name="minuteColorBottom" type="string">
+      <default>#F25576</default>
+    </entry>
+    <entry name="secondsColor" type="string">
+      <default>#4DD8C8</default>
+    </entry>
+    <entry name="dateColor" type="string">
+      <default>#CC73E1</default>
+    </entry>
+    <entry name="prefixColor" type="string">
+      <default>#AAAAAA</default>
+    </entry>
+    
+    <!-- Background and glow -->
+    <entry name="rectColor" type="string">
+      <default>#00001B</default>
+    </entry>
+    <entry name="glowColor" type="string">
+      <default>#9747c7</default>
     </entry>
     <entry name="hourFormat" type="bool">
       <default>false</default>

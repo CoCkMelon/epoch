@@ -1,14 +1,23 @@
 import QtQuick
-import Qt.labs.platform
 import QtQuick.Controls
 import QtQuick.Layouts 1.11
+import QtQuick.Dialogs
 
 Item {
     id: configRoot
 
     signal configurationChanged
 
-    property alias cfg_customColor: colorDialog.color
+    property string cfg_hourColorTop
+    property string cfg_hourColorBottom
+    property string cfg_colonColor
+    property string cfg_minuteColorTop
+    property string cfg_minuteColorBottom
+    property string cfg_secondsColor
+    property string cfg_dateColor
+    property string cfg_prefixColor
+    property string cfg_rectColor
+    property string cfg_glowColor
     property alias cfg_hourFormat: horsFormat.checked
     property alias cfg_activeText: activeText.checked
 
@@ -20,8 +29,34 @@ Item {
     property alias cfg_clickCommand: clickCommand.text
     property alias cfg_customPrefixText: customPrefixText.text
 
-    ColorDialog {
-        id: colorDialog
+    component ColorButton: Rectangle {
+        property string configProp
+        property var dialog
+        
+        color: configRoot["cfg_" + configProp]
+        border.color: "#B3FFFFFF"
+        border.width: 1
+        width: 64
+        radius: 4
+        height: 24
+        
+        MouseArea {
+            anchors.fill: parent
+            onClicked: parent.dialog.open()
+        }
+        
+        Component.onCompleted: {
+            dialog = Qt.createQmlObject('
+                import QtQuick
+                import QtQuick.Dialogs
+                ColorDialog { options: ColorDialog.ShowAlphaChannel }
+            ', parent)
+            dialog.selectedColor = Qt.binding(function() { return parent.color })
+            dialog.accepted.connect(function() {
+                configRoot["cfg_" + parent.configProp] = dialog.selectedColor
+                configRoot.configurationChanged()
+            })
+        }
     }
 
     ColumnLayout {
@@ -30,29 +65,36 @@ Item {
         GridLayout{
             columns: 2
 
-            // Color
-            Label {
-                Layout.minimumWidth: configRoot.width/2
-                horizontalAlignment: Label.AlignRight
-                text: i18n("Color:")
-            }
-            Rectangle {
-                id: colorhex
-                color: colorDialog.color
-                border.color: "#B3FFFFFF"
-                border.width: 1
-                width: 64
-                radius: 4
-                height: 24
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: colorDialog.open()
-                }
-            }
-            Connections {
-                target: colorDialog
-                function onAccepted() { configRoot.configurationChanged() }
-            }
+            // Time colors
+            Label { text: i18n("Hour (top):"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
+            ColorButton { id: hourTop; configProp: "hourColorTop" }
+            
+            Label { text: i18n("Hour (bottom):"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
+            ColorButton { id: hourBottom; configProp: "hourColorBottom" }
+            
+            Label { text: i18n("Colon:"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
+            ColorButton { id: colon; configProp: "colonColor" }
+            
+            Label { text: i18n("Minute (top):"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
+            ColorButton { id: minuteTop; configProp: "minuteColorTop" }
+            
+            Label { text: i18n("Minute (bottom):"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
+            ColorButton { id: minuteBottom; configProp: "minuteColorBottom" }
+            
+            Label { text: i18n("Seconds:"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
+            ColorButton { id: seconds; configProp: "secondsColor" }
+            
+            Label { text: i18n("Date:"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
+            ColorButton { id: date; configProp: "dateColor" }
+            
+            Label { text: i18n("Prefix text:"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
+            ColorButton { id: prefix; configProp: "prefixColor" }
+            
+            Label { text: i18n("Background rect:"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
+            ColorButton { id: rect; configProp: "rectColor" }
+            
+            Label { text: i18n("Glow:"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
+            ColorButton { id: glow; configProp: "glowColor" }
 
             // 12h format
             Label { Layout.minimumWidth: configRoot.width/2 }
