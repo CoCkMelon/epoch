@@ -97,3 +97,4 @@ Item {
             TextField { id: clickCommand; placeholderText: i18n("e.g. kalendar, gnome-calendar, thunderbird -calendar"); onEditingFinished: configRoot.configurationChanged() }
         }
     }
+}
