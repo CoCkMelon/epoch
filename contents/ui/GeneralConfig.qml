@@ -39,7 +39,7 @@ Item {
             }
             SpinBox{
                 id: porcetageOpacity
-                from: 30
+                from: 0
                 to: 100
                 stepSize: 10
                 onValueChanged: configRoot.configurationChanged()

@@ -8,6 +8,8 @@
 
 	<entry name="opacity" type="Int">
 		<default>100</default>
+		<min>0</min>
+		<max>100</max>
 	</entry>
     <entry name="customColor" type="string">
       <default>#ffffff</default>
