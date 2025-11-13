@@ -235,9 +235,8 @@ PlasmoidItem {
                 transformOrigin: Item.TopLeft
                 rotation: 0
                 anchors.left: timeRow.right
-                // Keep seconds inside rect without cross-parent anchors
-                anchors.top: timeRow.top
-                anchors.topMargin: Math.round(mainContainer.height * 0.10) + bounceOffset
+                anchors.verticalCenter: timeRow.verticalCenter
+                anchors.verticalCenterOffset: -Math.round(timeRow.height * 0.25) + bounceOffset
 
                 // Spring animations
                 SpringAnimation {
