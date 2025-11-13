@@ -33,7 +33,8 @@ Item {
         property string configProp
         property var dialog
         
-        color: configRoot["cfg_" + configProp]
+        // Bind button color to config value
+        color: configRoot["cfg_" + configProp] || "#000000"
         border.color: "#B3FFFFFF"
         border.width: 1
         width: 64
@@ -42,7 +43,11 @@ Item {
         
         MouseArea {
             anchors.fill: parent
-            onClicked: parent.dialog.open()
+            onClicked: {
+                // Set dialog color before opening
+                parent.dialog.selectedColor = parent.color
+                parent.dialog.open()
+            }
         }
         
         Component.onCompleted: {
@@ -51,9 +56,10 @@ Item {
                 import QtQuick.Dialogs
                 ColorDialog { options: ColorDialog.ShowAlphaChannel }
             ', parent)
-            dialog.selectedColor = Qt.binding(function() { return parent.color })
             dialog.accepted.connect(function() {
-                configRoot["cfg_" + parent.configProp] = dialog.selectedColor
+                // Update config property as string (hex with alpha)
+                var c = dialog.selectedColor
+                configRoot["cfg_" + parent.configProp] = c.toString()
                 configRoot.configurationChanged()
             })
         }
