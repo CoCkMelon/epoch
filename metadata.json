@@ -9,8 +9,8 @@
         ],
         "Name": "Iridescent",
         "Id": "Iridescent",
-        "Description": "Plasmoid showing current date and clock",
-        "Category": "Utilities",
+        "Description": "Stylish digital clock with customizable colors and gradients",
+        "Category": "Date and Time",
         "Icon": "clock",
         "EnabledByDefault": true,
         "License": "GPL-3.0+",
@@ -21,5 +21,8 @@
         "Website": "https://store.kde.org/p/2136299/"
     },
     "X-Plasma-API-Minimum-Version": "6.0",
-    "X-Plasma-MainScript": "ui/main.qml"
+    "X-Plasma-MainScript": "ui/main.qml",
+    "X-Plasma-Provides": [
+        "org.kde.plasma.time"
+    ]
 }
