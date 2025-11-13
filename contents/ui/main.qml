@@ -99,7 +99,8 @@ PlasmoidItem {
         Rectangle {
             id: base
             property int pad: 1
-            width: timeContainer.width + pad * 2 // based on content; panel will allocate width
+            // Width based only on time row (excludes seconds) to prevent expansion
+            width: timeRow.width + pad * 2
             // Height and position include user-configured overflow
             height: mainContainer.height + plasmoid.configuration.overflowTop + plasmoid.configuration.overflowBottom
             radius: height/10
@@ -134,10 +135,6 @@ PlasmoidItem {
             // Raise time a bit across all sizes (branch-free)
             anchors.verticalCenterOffset: -Math.round(mainContainer.height * 0.10)
 
-            // Keep width animation in sync with text width change
-            Behavior on width {
-                NumberAnimation { duration: 150; easing.type: Easing.InOutBack }
-            }
             
             MouseArea {
                 anchors.fill: parent
