@@ -111,11 +111,17 @@ Item {
         }
     }
 
-    ColumnLayout {
-        spacing: 12
+    ScrollView {
+        anchors.fill: parent
+        contentWidth: availableWidth
 
-        GridLayout{
-            columns: 2
+        ColumnLayout {
+            width: parent.width
+            spacing: 12
+
+            GridLayout{
+                Layout.fillWidth: true
+                columns: 2
 
             // Time colors
             Label { text: i18n("Hour (top):"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
@@ -186,6 +192,7 @@ Item {
             // Disable animations
             Label { Layout.minimumWidth: configRoot.width/2 }
             CheckBox { id: disableAnimations; text: i18n("Disable animations"); onToggled: configRoot.configurationChanged() }
+            }
         }
     }
 
