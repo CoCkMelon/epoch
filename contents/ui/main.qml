@@ -122,8 +122,18 @@ PlasmoidItem {
 
             Row {
                 id: timeRow
-                spacing: 0
+                spacing: Math.round(mainContainer.height * 0.08)
                 anchors.left: parent.left
+
+                // Optional localized prefix text ("it is", "son las", etc.)
+                Text {
+                    visible: plasmoid.configuration.activeText
+                    text: root.desktoptext(root.codeleng)
+                    font.pixelSize: hora.font.pixelSize * 0.35
+                    font.family: hora.font.family
+                    color: "#AAAAAA"
+                    anchors.verticalCenter: parent.verticalCenter
+                }
                 
                 // Hours with blue gradient
                 Text {
