@@ -126,8 +126,7 @@ PlasmoidItem {
         // Time display (16:20)
         Item {
             id: timeContainer
-            // Width only accounts for time digits, not seconds (so seconds don't push time around)
-            width: timeRow.width
+            width: childrenRect.width
             height: childrenRect.height
             anchors.left: base.left
             anchors.leftMargin: base.pad
@@ -135,7 +134,6 @@ PlasmoidItem {
             // Raise time a bit across all sizes (branch-free)
             anchors.verticalCenterOffset: -Math.round(mainContainer.height * 0.10)
 
-            
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
@@ -217,9 +215,10 @@ PlasmoidItem {
                     }
                 }
             }
-            
-            // Seconds as superscript
-            Text {
+        }
+        
+        // Seconds as superscript (outside timeContainer so it doesn't affect width)
+        Text {
                 id: segundos
                 property var currentDate: hora.currentDate
                 // Bounce/rotation state
@@ -266,7 +265,6 @@ PlasmoidItem {
                     bounceAnim.start()
                     rotAnim.start()
                 }
-            }
         }
         
         // Date display centered below time
