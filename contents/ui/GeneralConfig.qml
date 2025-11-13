@@ -31,6 +31,7 @@ Item {
 
     component ColorButton: Row {
         property string configProp
+        property string defaultColor
         property var dialog
         spacing: 4
         
@@ -79,6 +80,18 @@ Item {
             }
         }
         
+        Button {
+            text: "\u{21BA}"  // ↺ reset/undo arrow
+            width: 28
+            height: 24
+            ToolTip.visible: hovered
+            ToolTip.text: i18n("Reset to default")
+            onClicked: {
+                configRoot["cfg_" + configProp] = defaultColor
+                configRoot.configurationChanged()
+            }
+        }
+        
         Component.onCompleted: {
             var prop = configProp  // Capture in local scope
             dialog = Qt.createQmlObject('
@@ -104,34 +117,34 @@ Item {
 
             // Time colors
             Label { text: i18n("Hour (top):"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
-            ColorButton { id: hourTop; configProp: "hourColorTop" }
+            ColorButton { configProp: "hourColorTop"; defaultColor: "#78C3FB" }
             
             Label { text: i18n("Hour (bottom):"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
-            ColorButton { id: hourBottom; configProp: "hourColorBottom" }
+            ColorButton { configProp: "hourColorBottom"; defaultColor: "#3A66F9" }
             
             Label { text: i18n("Colon:"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
-            ColorButton { id: colon; configProp: "colonColor" }
+            ColorButton { configProp: "colonColor"; defaultColor: "#DDDDDD" }
             
             Label { text: i18n("Minute (top):"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
-            ColorButton { id: minuteTop; configProp: "minuteColorTop" }
+            ColorButton { configProp: "minuteColorTop"; defaultColor: "#F9A55A" }
             
             Label { text: i18n("Minute (bottom):"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
-            ColorButton { id: minuteBottom; configProp: "minuteColorBottom" }
+            ColorButton { configProp: "minuteColorBottom"; defaultColor: "#F25576" }
             
             Label { text: i18n("Seconds:"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
-            ColorButton { id: seconds; configProp: "secondsColor" }
+            ColorButton { configProp: "secondsColor"; defaultColor: "#4DD8C8" }
             
             Label { text: i18n("Date:"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
-            ColorButton { id: date; configProp: "dateColor" }
+            ColorButton { configProp: "dateColor"; defaultColor: "#CC73E1" }
             
             Label { text: i18n("Prefix text:"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
-            ColorButton { id: prefix; configProp: "prefixColor" }
+            ColorButton { configProp: "prefixColor"; defaultColor: "#AAAAAA" }
             
             Label { text: i18n("Background rect:"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
-            ColorButton { id: rect; configProp: "rectColor" }
+            ColorButton { configProp: "rectColor"; defaultColor: "#00001B" }
             
             Label { text: i18n("Glow:"); Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight }
-            ColorButton { id: glow; configProp: "glowColor" }
+            ColorButton { configProp: "glowColor"; defaultColor: "#9747c7" }
 
             // 12h format
             Label { Layout.minimumWidth: configRoot.width/2 }
