@@ -126,13 +126,15 @@ PlasmoidItem {
                 anchors.left: parent.left
 
                 // Optional localized prefix text ("it is", "son las", etc.)
-                Text {
-                    visible: plasmoid.configuration.activeText
-                    text: root.desktoptext(root.codeleng)
-                    font.pixelSize: hora.font.pixelSize * 0.35
-                    font.family: hora.font.family
-                    color: "#AAAAAA"
+                Loader {
+                    active: plasmoid.configuration.activeText
                     anchors.verticalCenter: parent.verticalCenter
+                    sourceComponent: Text {
+                        text: root.desktoptext(root.codeleng)
+                        font.pixelSize: hora.font.pixelSize * 0.35
+                        font.family: hora.font.family
+                        color: "#AAAAAA"
+                    }
                 }
                 
                 // Hours with blue gradient
