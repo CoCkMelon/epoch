@@ -21,21 +21,48 @@ PlasmoidItem {
 
     function desktoptext(languageCode) {
         const translations = {
-            "es": "son las",         // Spanish
-            "en": "it is",           // English
-            "hi": "यह",              // Hindi
-            "fr": "il est",          // French
-            "de": "es ist",          // German
-            "it": "sono le",         // Italian
-            "pt": "são",             // Portuguese
-            "ru": "сейчас",          // Russian
-            "zh": "现在是",           // Chinese (Mandarin)
-            "ja": "今",              // Japanese
-            "ko": "지금은",           // Korean
-            "nl": "het is"           // Dutch
+            "en": "now",        // English
+            "es": "ahora",      // Spanish
+            "fr": "maint.",     // French (maintenant)
+            "de": "jetzt",      // German
+            "it": "ora",        // Italian
+            "pt": "agora",      // Portuguese
+            "ru": "ща",         // Russian (сейчас)
+            "uk": "ща",         // Ukrainian
+            "be": "ща",         // Belarusian
+            "pl": "teraz",      // Polish
+            "cs": "nyní",       // Czech
+            "sk": "teraz",      // Slovak
+            "bg": "сега",       // Bulgarian
+            "sr": "сада",       // Serbian
+            "hr": "sada",       // Croatian
+            "sl": "zdaj",       // Slovenian
+            "ro": "acum",       // Romanian
+            "hu": "most",       // Hungarian
+            "tr": "şimdi",      // Turkish
+            "ar": "الآن",       // Arabic
+            "he": "עכשיו",      // Hebrew
+            "fa": "الان",       // Persian
+            "hi": "अब",         // Hindi
+            "bn": "এখন",        // Bengali
+            "ta": "இப்போது",    // Tamil
+            "th": "ตอนนี้",     // Thai
+            "vi": "bây giờ",    // Vietnamese
+            "id": "sekarang",   // Indonesian
+            "ms": "sekarang",   // Malay
+            "tl": "ngayon",     // Tagalog
+            "zh": "现在",        // Chinese
+            "ja": "今",         // Japanese
+            "ko": "지금",        // Korean
+            "nl": "nu",         // Dutch
+            "sv": "nu",         // Swedish
+            "no": "nå",         // Norwegian
+            "da": "nu",         // Danish
+            "fi": "nyt",        // Finnish
+            "el": "τώρα",       // Greek
+            "ka": "ახლა",       // Georgian
+            "hy": "հիմա"        // Armenian
         };
-
-        // Return the translation for the language code or default to English if not found
         return translations[languageCode] || translations["en"];
     }
 
