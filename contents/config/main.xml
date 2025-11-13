@@ -67,5 +67,8 @@
     <entry name="customDateFormat" type="string">
       <default>ddd d M yy</default>
     </entry>
+    <entry name="disableAnimations" type="bool">
+      <default>false</default>
+    </entry>
   </group>
 </kcfg>

@@ -29,6 +29,7 @@ Item {
     property alias cfg_clickCommand: clickCommand.text
     property alias cfg_customPrefixText: customPrefixText.text
     property alias cfg_customDateFormat: customDateFormat.text
+    property alias cfg_disableAnimations: disableAnimations.checked
 
     component ColorButton: Row {
         property string configProp
@@ -181,6 +182,10 @@ Item {
             // Custom date format
             Label { Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Date format:") }
             TextField { id: customDateFormat; placeholderText: i18n("Qt date format (e.g., ddd d M yy, dd/MM/yyyy)"); onEditingFinished: configRoot.configurationChanged() }
+
+            // Disable animations
+            Label { Layout.minimumWidth: configRoot.width/2 }
+            CheckBox { id: disableAnimations; text: i18n("Disable animations"); onToggled: configRoot.configurationChanged() }
         }
     }
 

@@ -254,15 +254,17 @@ PlasmoidItem {
                 }
 
                 onTextChanged: {
-                    // Alternate sign for subtle wobble
-                    var s = parseInt(text)
-                    rotSign = (s % 2 === 0) ? 1 : -1
-                    // Kick values
-                    bounceOffset = -Math.round(hora.font.pixelSize * 0.16)
-                    rotation = rotSign * 10
-                    // Start springs
-                    bounceAnim.start()
-                    rotAnim.start()
+                    if (!plasmoid.configuration.disableAnimations) {
+                        // Alternate sign for subtle wobble
+                        var s = parseInt(text)
+                        rotSign = (s % 2 === 0) ? 1 : -1
+                        // Kick values
+                        bounceOffset = -Math.round(hora.font.pixelSize * 0.16)
+                        rotation = rotSign * 10
+                        // Start springs
+                        bounceAnim.start()
+                        rotAnim.start()
+                    }
                 }
         }
         
