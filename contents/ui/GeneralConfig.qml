@@ -29,24 +29,53 @@ Item {
     property alias cfg_clickCommand: clickCommand.text
     property alias cfg_customPrefixText: customPrefixText.text
 
-    component ColorButton: Rectangle {
+    component ColorButton: Row {
         property string configProp
         property var dialog
+        spacing: 4
         
-        // Bind button color to config value
-        color: configRoot["cfg_" + configProp]
-        border.color: "#B3FFFFFF"
-        border.width: 1
-        width: 64
-        radius: 4
-        height: 24
+        Rectangle {
+            id: colorPreview
+            color: configRoot["cfg_" + configProp]
+            border.color: "#B3FFFFFF"
+            border.width: 1
+            width: 64
+            radius: 4
+            height: 24
+            
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    parent.parent.dialog.selectedColor = colorPreview.color
+                    parent.parent.dialog.open()
+                }
+            }
+        }
         
-        MouseArea {
-            anchors.fill: parent
+        Button {
+            text: "\u{1F50D}"  // 🔍 magnifying glass
+            width: 28
+            height: 24
+            ToolTip.visible: hovered
+            ToolTip.text: i18n("Pick color from screen")
             onClicked: {
-                // Set dialog color before opening
-                parent.dialog.selectedColor = parent.color
-                parent.dialog.open()
+                var prop = configProp
+                // Use kcolorchooser if available for reliable screen picking
+                var process = Qt.createQmlObject('
+                    import QtQuick
+                    import org.kde.plasma.plasma5support as Plasma5Support
+                    Plasma5Support.DataSource { engine: "executable" }
+                ', parent)
+                process.connectedSources = ["kcolorchooser --pick"]
+                process.newData.connect(function(sourceName, data) {
+                    if (data["exit code"] === 0) {
+                        var output = data.stdout.trim()
+                        if (output) {
+                            configRoot["cfg_" + prop] = output
+                            configRoot.configurationChanged()
+                        }
+                    }
+                })
             }
         }
         
