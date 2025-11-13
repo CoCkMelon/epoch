@@ -25,7 +25,7 @@ Item {
     }
 
     ColumnLayout {
-        spacing: units.smallSpacing * 2
+        spacing: 12
 
         GridLayout{
             columns: 2

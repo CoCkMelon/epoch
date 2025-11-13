@@ -198,9 +198,9 @@ PlasmoidItem {
                 transformOrigin: Item.TopLeft
                 rotation: 0
                 anchors.left: timeRow.right
-                // Anchor to base top so it sits below the glow edge across sizes
-                anchors.top: base.top
-                anchors.topMargin: Math.round(mainContainer.height * 0.20) + bounceOffset
+                // Keep seconds inside rect without cross-parent anchors
+                anchors.top: timeRow.top
+                anchors.topMargin: Math.round(mainContainer.height * 0.10) + bounceOffset
 
                 // Spring animations
                 SpringAnimation {
