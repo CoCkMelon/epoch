@@ -261,8 +261,8 @@ PlasmoidItem {
                     // Alternate sign for subtle wobble
                     var s = parseInt(text)
                     rotSign = (s % 2 === 0) ? 1 : -1
-                    // Kick values (clamp to prevent overflow at huge panel sizes)
-                    bounceOffset = -Math.min(30, Math.round(hora.font.pixelSize * 0.16))
+                    // Kick values
+                    bounceOffset = -Math.round(hora.font.pixelSize * 0.16)
                     rotation = rotSign * 10
                     // Start springs
                     bounceAnim.start()
