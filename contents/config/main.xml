@@ -35,5 +35,8 @@
     <entry name="clickCommand" type="string">
       <default></default>
     </entry>
+    <entry name="customPrefixText" type="string">
+      <default></default>
+    </entry>
   </group>
 </kcfg>

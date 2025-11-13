@@ -19,6 +19,7 @@ Item {
     property alias cfg_overflowTop: overflowTop.value
     property alias cfg_overflowBottom: overflowBottom.value
     property alias cfg_clickCommand: clickCommand.text
+    property alias cfg_customPrefixText: customPrefixText.text
 
     ColorDialog {
         id: colorDialog
@@ -91,10 +92,14 @@ Item {
             // Overflow bottom (px)
             Label { Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Bottom overflow (px):") }
             SpinBox { id: overflowBottom; from: -100; to: 200; stepSize: 1; value: 16; onValueChanged: configRoot.configurationChanged() }
-
             // Click command
             Label { Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Command on time click:") }
             TextField { id: clickCommand; placeholderText: i18n("e.g. kalendar, gnome-calendar, thunderbird -calendar"); onEditingFinished: configRoot.configurationChanged() }
+
+            // Custom prefix text
+            Label { Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Custom prefix text:") }
+            TextField { id: customPrefixText; placeholderText: i18n("Leave empty to use auto-detected locale text"); onEditingFinished: configRoot.configurationChanged() }
         }
     }
+
 }

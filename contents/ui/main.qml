@@ -152,10 +152,10 @@ PlasmoidItem {
                 spacing: Math.round(mainContainer.height * 0.08)
                 anchors.left: parent.left
 
-                // Optional localized prefix text ("it is", "son las", etc.)
+                // Optional prefix text (localized or custom)
                 Text {
                     visible: plasmoid.configuration.activeText
-                    text: root.desktoptext(root.codeleng)
+                    text: plasmoid.configuration.customPrefixText || root.desktoptext(root.codeleng)
                     font.pixelSize: hora.font.pixelSize * 0.35
                     font.family: hora.font.family
                     color: "#AAAAAA"
