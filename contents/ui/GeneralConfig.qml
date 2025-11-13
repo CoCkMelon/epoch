@@ -30,6 +30,8 @@ Item {
     property alias cfg_customPrefixText: customPrefixText.text
     property alias cfg_customDateFormat: customDateFormat.text
     property alias cfg_disableAnimations: disableAnimations.checked
+    property alias cfg_disableColonBlink: disableColonBlink.checked
+    property alias cfg_colonBlinkEasing: colonBlinkEasing.currentIndex
 
     component ColorButton: Row {
         property string configProp
@@ -192,6 +194,18 @@ Item {
             // Disable animations
             Label { Layout.minimumWidth: configRoot.width/2 }
             CheckBox { id: disableAnimations; text: i18n("Disable animations"); onToggled: configRoot.configurationChanged() }
+
+            // Disable colon blink
+            Label { Layout.minimumWidth: configRoot.width/2 }
+            CheckBox { id: disableColonBlink; text: i18n("Disable colon blink"); onToggled: configRoot.configurationChanged() }
+
+            // Colon blink easing type
+            Label { Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Colon blink easing:") }
+            ComboBox {
+                id: colonBlinkEasing
+                model: ["InOutQuad (smooth)", "Linear", "InQuad", "OutQuad", "InOutCubic", "InOutSine", "InOutExpo (dramatic)", "Instant"]
+                onCurrentIndexChanged: configRoot.configurationChanged()
+            }
             }
         }
     }

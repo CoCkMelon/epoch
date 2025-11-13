@@ -187,11 +187,33 @@ PlasmoidItem {
                 
                 // Colon separator
                 Text {
+                    id: colonText
                     text: ":"
                     font.pixelSize: hora.font.pixelSize
                     font.family: hora.font.family
                     font.weight: Font.Bold
                     color: plasmoid.configuration.colonColor
+                    opacity: 1.0
+                    
+                    SequentialAnimation {
+                        id: blinkAnim
+                        running: false
+                        property var easingTypes: [Easing.InOutQuad, Easing.Linear, Easing.InQuad, Easing.OutQuad, Easing.InOutCubic, Easing.InOutSine, Easing.InOutExpo]
+                        property int currentEasing: easingTypes[plasmoid.configuration.colonBlinkEasing] || Easing.InOutQuad
+                        property bool isInstant: plasmoid.configuration.colonBlinkEasing === 7
+                        NumberAnimation { target: colonText; property: "opacity"; to: 0.0; duration: blinkAnim.isInstant ? 0 : 250; easing.type: blinkAnim.currentEasing }
+                        PauseAnimation { duration: blinkAnim.isInstant ? 500 : 0 }
+                        NumberAnimation { target: colonText; property: "opacity"; to: 1.0; duration: blinkAnim.isInstant ? 0 : 250; easing.type: blinkAnim.currentEasing }
+                    }
+                    
+                    Connections {
+                        target: segundos
+                        function onTextChanged() {
+                            if (!plasmoid.configuration.disableColonBlink) {
+                                blinkAnim.restart()
+                            }
+                        }
+                    }
                 }
                 
                 // Minutes with orange-pink gradient
@@ -224,12 +246,13 @@ PlasmoidItem {
             // Bounce/rotation state
             property real bounceOffset: 0
             property int rotSign: 1
+            property int transformOriginValue: Item.TopLeft
             text: Qt.formatDateTime(currentDate, "ss")
             font.pixelSize: hora.font.pixelSize * 0.44
             font.family: hora.font.family
             font.weight: Font.Bold
             color: plasmoid.configuration.secondsColor
-            transformOrigin: Item.TopLeft
+            transformOrigin: transformOriginValue
             rotation: 0
             // Position relative to timeContainer + timeRow
             x: timeContainer.x + timeRow.width
@@ -241,27 +264,31 @@ PlasmoidItem {
                     target: segundos
                     property: "bounceOffset"
                     to: 0
-                    spring: 4
-                    damping: 0.26
+                    spring: 20
+                    damping: 10.0
                 }
                 SpringAnimation {
                     id: rotAnim
                     target: segundos
                     property: "rotation"
                     to: 0
-                    spring: 4
-                    damping: 0.26
+                    spring: 6
+                    damping: 0.1
                 }
 
                 onTextChanged: {
                     if (!plasmoid.configuration.disableAnimations) {
                         // Random rotation direction and amount
-                        rotSign = (Math.random() > 0.5) ? 1 : -1
-                        // Random kick values for variety (±20% variation)
-                        var bounceBase = hora.font.pixelSize * 0.16
-                        var rotBase = 10
-                        bounceOffset = -Math.round(bounceBase * (0.8 + Math.random() * 0.4))
-                        rotation = rotSign * (rotBase * (0.8 + Math.random() * 0.4))
+                        rotSign *= -1
+                        // Random transform origin for more variety
+                        var origins = [Item.TopLeft, Item.Top, Item.TopRight, Item.Left, Item.Center, Item.Right, Item.BottomLeft, Item.Bottom, Item.BottomRight]
+                        transformOriginValue = origins[Math.floor(Math.random() * origins.length)]
+                        // Random kick values for variety
+                        var bounceBase = hora.font.pixelSize * 0.4
+                        var rotBase = 60
+                        var randval = Math.random()-0.2
+                        bounceOffset = -Math.round(bounceBase * (0.5+4*randval*randval*randval*randval*randval*randval*randval))
+                        rotation = rotSign * (rotBase * (0.5+4*randval*randval*randval*randval*randval*randval*randval))
                         // Start springs
                         bounceAnim.start()
                         rotAnim.start()
