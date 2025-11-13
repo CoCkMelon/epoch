@@ -255,12 +255,13 @@ PlasmoidItem {
 
                 onTextChanged: {
                     if (!plasmoid.configuration.disableAnimations) {
-                        // Alternate sign for subtle wobble
-                        var s = parseInt(text)
-                        rotSign = (s % 2 === 0) ? 1 : -1
-                        // Kick values
-                        bounceOffset = -Math.round(hora.font.pixelSize * 0.16)
-                        rotation = rotSign * 10
+                        // Random rotation direction and amount
+                        rotSign = (Math.random() > 0.5) ? 1 : -1
+                        // Random kick values for variety (±20% variation)
+                        var bounceBase = hora.font.pixelSize * 0.16
+                        var rotBase = 10
+                        bounceOffset = -Math.round(bounceBase * (0.8 + Math.random() * 0.4))
+                        rotation = rotSign * (rotBase * (0.8 + Math.random() * 0.4))
                         // Start springs
                         bounceAnim.start()
                         rotAnim.start()
