@@ -64,5 +64,8 @@
     <entry name="customPrefixText" type="string">
       <default></default>
     </entry>
+    <entry name="customDateFormat" type="string">
+      <default>ddd d M yy</default>
+    </entry>
   </group>
 </kcfg>

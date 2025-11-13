@@ -28,6 +28,7 @@ Item {
     property alias cfg_overflowBottom: overflowBottom.value
     property alias cfg_clickCommand: clickCommand.text
     property alias cfg_customPrefixText: customPrefixText.text
+    property alias cfg_customDateFormat: customDateFormat.text
 
     component ColorButton: Row {
         property string configProp
@@ -176,6 +177,10 @@ Item {
             // Custom prefix text
             Label { Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Custom prefix text:") }
             TextField { id: customPrefixText; placeholderText: i18n("Leave empty to use auto-detected locale text"); onEditingFinished: configRoot.configurationChanged() }
+
+            // Custom date format
+            Label { Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Date format:") }
+            TextField { id: customDateFormat; placeholderText: i18n("Qt date format (e.g., ddd d M yy, dd/MM/yyyy)"); onEditingFinished: configRoot.configurationChanged() }
         }
     }
 

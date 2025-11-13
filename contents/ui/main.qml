@@ -277,7 +277,7 @@ PlasmoidItem {
             width: base.width
             horizontalAlignment: Text.AlignLeft
             property var currentDate: hora.currentDate
-            text: Qt.formatDateTime(currentDate, "ddd d M yy")
+            text: Qt.formatDateTime(currentDate, plasmoid.configuration.customDateFormat || "ddd d M yy")
             font.pixelSize: mainContainer.height * 0.32
             font.family: hora.font.family
             color: plasmoid.configuration.dateColor
