@@ -32,7 +32,7 @@ Item {
 
             // Opacity
             Label {
-                Layout.minimumWidth: root.width/2
+                Layout.minimumWidth: configRoot.width/2
                 text: i18n("Opacity:")
                 horizontalAlignment: Text.AlignRight
             }
@@ -41,11 +41,12 @@ Item {
                 from: 30
                 to: 100
                 stepSize: 10
+                onValueChanged: configRoot.configurationChanged()
             }
 
             // Color
             Label {
-                Layout.minimumWidth: root.width/2
+                Layout.minimumWidth: configRoot.width/2
                 horizontalAlignment: Label.AlignRight
                 text: i18n("Color:")
             }
@@ -62,37 +63,37 @@ Item {
                     onClicked: colorDialog.open()
                 }
             }
+            Connections {
+                target: colorDialog
+                function onAccepted() { configRoot.configurationChanged() }
+            }
 
             // 12h format
-            Label { Layout.minimumWidth: root.width/2 }
-            CheckBox { id: horsFormat; text: i18n("12 Hour Format") }
+            Label { Layout.minimumWidth: configRoot.width/2 }
+            CheckBox { id: horsFormat; text: i18n("12 Hour Format"); onToggled: configRoot.configurationChanged() }
 
             // Active text
-            Label { Layout.minimumWidth: root.width/2 }
-            CheckBox { id: activeText; text: i18n("Active Text:") }
+            Label { Layout.minimumWidth: configRoot.width/2 }
+            CheckBox { id: activeText; text: i18n("Active Text:"); onToggled: configRoot.configurationChanged() }
 
             // Show rectangle
-            Label { Layout.minimumWidth: root.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Show background rectangle:") }
-            CheckBox { id: enableRect; checked: true }
+            Label { Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Show background rectangle:") }
+            CheckBox { id: enableRect; checked: true; onToggled: configRoot.configurationChanged() }
 
             // Enable glow
-            Label { Layout.minimumWidth: root.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Enable glow:") }
-            CheckBox { id: enableGlow; checked: true }
+            Label { Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Enable glow:") }
+            CheckBox { id: enableGlow; checked: true; onToggled: configRoot.configurationChanged() }
 
             // Overflow top (px)
-            Label { Layout.minimumWidth: root.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Top overflow (px):") }
-            SpinBox { id: overflowTop; from: -100; to: 200; stepSize: 1 }
+            Label { Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Top overflow (px):") }
+            SpinBox { id: overflowTop; from: -100; to: 200; stepSize: 1; onValueChanged: configRoot.configurationChanged() }
 
             // Overflow bottom (px)
-            Label { Layout.minimumWidth: root.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Bottom overflow (px):") }
-            SpinBox { id: overflowBottom; from: -100; to: 200; stepSize: 1; value: 16 }
+            Label { Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Bottom overflow (px):") }
+            SpinBox { id: overflowBottom; from: -100; to: 200; stepSize: 1; value: 16; onValueChanged: configRoot.configurationChanged() }
 
             // Click command
-            Label { Layout.minimumWidth: root.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Command on time click:") }
-            TextField { id: clickCommand; placeholderText: i18n("e.g. kalendar, gnome-calendar, thunderbird -calendar") }
+            Label { Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Command on time click:") }
+            TextField { id: clickCommand; placeholderText: i18n("e.g. kalendar, gnome-calendar, thunderbird -calendar"); onEditingFinished: configRoot.configurationChanged() }
         }
     }
-
-}
-
-}
