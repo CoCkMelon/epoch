@@ -1,0 +1,153 @@
+# Swedish translations for Plasma Clock Widget
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-28 19:14+0300\n"
+"PO-Revision-Date: 2026-01-29 11:38+0300\n"
+"Last-Translator: \n"
+"Language-Team: Swedish\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "now"
+msgstr "nu"
+
+#: contents/ui/main.qml:102
+msgid "Open Date && Time Settings"
+msgstr "Öppna datum- och tidsinställningar"
+
+#: contents/ui/main.qml:110
+msgid "Copy Time (HH:MM:SS)"
+msgstr "Kopiera tid (HH:MM:SS)"
+
+#: contents/ui/main.qml:115
+msgid "Copy Time (HH:MM)"
+msgstr "Kopiera tid (HH:MM)"
+
+#: contents/ui/main.qml:120
+msgid "Copy Unix Timestamp"
+msgstr "Kopiera Unix-tidsstämpel"
+
+#: contents/ui/main.qml:125
+msgid "Copy Date"
+msgstr "Kopiera datum"
+
+#: contents/ui/main.qml:130
+msgid "Copy ISO Date"
+msgstr "Kopiera ISO-datum"
+
+#: contents/ui/GeneralConfig.qml:65
+msgid "Pick color from screen"
+msgstr "Välj färg från skärmen"
+
+#: contents/ui/GeneralConfig.qml:92
+msgid "Reset to default"
+msgstr "Återställ till standard"
+
+#: contents/ui/GeneralConfig.qml:129
+msgid "Hour (top):"
+msgstr "Timme (överst):"
+
+#: contents/ui/GeneralConfig.qml:132
+msgid "Hour (bottom):"
+msgstr "Timme (nederst):"
+
+#: contents/ui/GeneralConfig.qml:135
+msgid "Colon:"
+msgstr "Kolontecken:"
+
+#: contents/ui/GeneralConfig.qml:138
+msgid "Minute (top):"
+msgstr "Minut (överst):"
+
+#: contents/ui/GeneralConfig.qml:141
+msgid "Minute (bottom):"
+msgstr "Minut (nederst):"
+
+#: contents/ui/GeneralConfig.qml:144
+msgid "Seconds:"
+msgstr "Sekunder:"
+
+#: contents/ui/GeneralConfig.qml:147
+msgid "Date:"
+msgstr "Datum:"
+
+#: contents/ui/GeneralConfig.qml:150
+msgid "Prefix text:"
+msgstr "Prefixtext:"
+
+#: contents/ui/GeneralConfig.qml:153
+msgid "Background rect:"
+msgstr "Bakgrundsrektangel:"
+
+#: contents/ui/GeneralConfig.qml:156
+msgid "Glow:"
+msgstr "Glöd:"
+
+#: contents/ui/GeneralConfig.qml:161
+msgid "12 Hour Format"
+msgstr "12-timmarsformat"
+
+#: contents/ui/GeneralConfig.qml:165
+msgid "Active Text:"
+msgstr "Aktiv text:"
+
+#: contents/ui/GeneralConfig.qml:168
+msgid "Show background rectangle:"
+msgstr "Visa bakgrundsrektangel:"
+
+#: contents/ui/GeneralConfig.qml:172
+msgid "Enable glow:"
+msgstr "Aktivera glöd:"
+
+#: contents/ui/GeneralConfig.qml:176
+msgid "Top overflow (px):"
+msgstr "Överflöde överst (px):"
+
+#: contents/ui/GeneralConfig.qml:180
+msgid "Bottom overflow (px):"
+msgstr "Överflöde nederst (px):"
+
+#: contents/ui/GeneralConfig.qml:183
+msgid "Command on time click:"
+msgstr "Kommando vid tidklick:"
+
+#: contents/ui/GeneralConfig.qml:184
+msgid "e.g. kalendar, gnome-calendar, thunderbird -calendar"
+msgstr "t.ex. kalendar, gnome-calendar, thunderbird -calendar"
+
+#: contents/ui/GeneralConfig.qml:187
+msgid "Custom prefix text:"
+msgstr "Anpassad prefixtext:"
+
+#: contents/ui/GeneralConfig.qml:188
+msgid "Leave empty to use auto-detected locale text"
+msgstr "Lämna tomt för att använda automatiskt upptäckt lokaltext"
+
+#: contents/ui/GeneralConfig.qml:191
+msgid "Date format:"
+msgstr "Datumformat:"
+
+#: contents/ui/GeneralConfig.qml:192
+msgid "Qt date format (e.g., ddd d M yy, dd/MM/yyyy)"
+msgstr "Qt-datumformat (t.ex., ddd d M yy, dd/MM/yyyy)"
+
+#: contents/ui/GeneralConfig.qml:196
+msgid "Disable animations"
+msgstr "Inaktivera animationer"
+
+#: contents/ui/GeneralConfig.qml:200
+msgid "Disable colon blink"
+msgstr "Inaktivera kolonblinkning"
+
+#: contents/ui/GeneralConfig.qml:203
+msgid "Colon blink easing:"
+msgstr "Kolonblinkningsutjämning:"
+
+#: contents/config/config.qml:6
+msgid "General"
+msgstr "Allmänt"

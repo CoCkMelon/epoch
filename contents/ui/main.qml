@@ -8,6 +8,7 @@ import Qt5Compat.GraphicalEffects
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasma5support as Plasma5Support
+import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
 
 PlasmoidItem {
     id: root
@@ -75,6 +76,64 @@ PlasmoidItem {
         source: "../fonts/Metropolis-Black.ttf"
     }
 
+
+    property var currentTime: new Date()
+
+    // Clipboard helper from KQuickControlsAddons
+    KQuickAddons.Clipboard {
+        id: clipboard
+    }
+
+    Timer {
+        interval: 1000
+        running: true
+        repeat: true
+        onTriggered: currentTime = new Date()
+    }
+    Plasma5Support.DataSource {
+        id: rootExec
+        engine: "executable"
+        onNewData: function(source, data) {
+            disconnectSource(source)
+        }
+    }
+    Plasmoid.contextualActions: [
+        PlasmaCore.Action {
+            text: i18n("Open Date && Time Settings")
+            icon.name: "preferences-system-time"
+            onTriggered: rootExec.connectSource("systemsettings kcm_clock")
+        },
+        PlasmaCore.Action {
+            isSeparator: true
+        },
+        PlasmaCore.Action {
+            text: i18n("Copy Time (HH:MM:SS)")
+            icon.name: "edit-copy"
+            onTriggered: clipboard.content = Qt.formatTime(currentTime, "hh:mm:ss")
+        },
+        PlasmaCore.Action {
+            text: i18n("Copy Time (HH:MM)")
+            icon.name: "edit-copy"
+            onTriggered: clipboard.content = Qt.formatTime(currentTime, "hh:mm")
+        },
+        PlasmaCore.Action {
+            text: i18n("Copy Unix Timestamp")
+            icon.name: "edit-copy"
+            onTriggered: clipboard.content = Math.floor(currentTime.getTime() / 1000).toString()
+        },
+        PlasmaCore.Action {
+            text: i18n("Copy Date")
+            icon.name: "edit-copy"
+            onTriggered: clipboard.content = Qt.formatDateTime(currentTime, plasmoid.configuration.customDateFormat || "d M yy")
+        },
+        PlasmaCore.Action {
+            text: i18n("Copy ISO Date")
+            icon.name: "edit-copy"
+            onTriggered: clipboard.content = currentTime.toISOString()
+        }
+    ]
+
+
     fullRepresentation: Item {
         id: mainContainer
         width: plasmoid.width
@@ -85,6 +144,9 @@ PlasmoidItem {
         Layout.preferredWidth: base.width
         Layout.minimumWidth: base.width
         property bool smallPanel: height <= 22
+
+        // For public access
+        property alias pubDateText: dateText
         
         // Allow glow to overflow outside plasmoid
         clip: false
@@ -256,7 +318,7 @@ PlasmoidItem {
             rotation: 0
             // Position relative to timeContainer + timeRow
             x: timeContainer.x + timeRow.width
-            y: timeContainer.y + Math.round(mainContainer.height * 0.10) + bounceOffset
+            y: timeContainer.y + bounceOffset
 
                 // Spring animations
                 SpringAnimation {

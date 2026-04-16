@@ -1,0 +1,153 @@
+# Hebrew translations for Plasma Clock Widget
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-28 19:14+0300\n"
+"PO-Revision-Date: 2026-01-29 11:38+0300\n"
+"Last-Translator: \n"
+"Language-Team: Hebrew\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "now"
+msgstr "עכשיו"
+
+#: contents/ui/main.qml:102
+msgid "Open Date && Time Settings"
+msgstr "פתח הגדרות תאריך ושעה"
+
+#: contents/ui/main.qml:110
+msgid "Copy Time (HH:MM:SS)"
+msgstr "העתק זמן (שעה:דקה:שנייה)"
+
+#: contents/ui/main.qml:115
+msgid "Copy Time (HH:MM)"
+msgstr "העתק זמן (שעה:דקה)"
+
+#: contents/ui/main.qml:120
+msgid "Copy Unix Timestamp"
+msgstr "העתק חותמת זמן יוניקס"
+
+#: contents/ui/main.qml:125
+msgid "Copy Date"
+msgstr "העתק תאריך"
+
+#: contents/ui/main.qml:130
+msgid "Copy ISO Date"
+msgstr "העתק תאריך ISO"
+
+#: contents/ui/GeneralConfig.qml:65
+msgid "Pick color from screen"
+msgstr "בחר צבע מהמסך"
+
+#: contents/ui/GeneralConfig.qml:92
+msgid "Reset to default"
+msgstr "אפס לברירת מחדל"
+
+#: contents/ui/GeneralConfig.qml:129
+msgid "Hour (top):"
+msgstr "שעה (למעלה):"
+
+#: contents/ui/GeneralConfig.qml:132
+msgid "Hour (bottom):"
+msgstr "שעה (למטה):"
+
+#: contents/ui/GeneralConfig.qml:135
+msgid "Colon:"
+msgstr "נקודתיים:"
+
+#: contents/ui/GeneralConfig.qml:138
+msgid "Minute (top):"
+msgstr "דקה (למעלה):"
+
+#: contents/ui/GeneralConfig.qml:141
+msgid "Minute (bottom):"
+msgstr "דקה (למטה):"
+
+#: contents/ui/GeneralConfig.qml:144
+msgid "Seconds:"
+msgstr "שניות:"
+
+#: contents/ui/GeneralConfig.qml:147
+msgid "Date:"
+msgstr "תאריך:"
+
+#: contents/ui/GeneralConfig.qml:150
+msgid "Prefix text:"
+msgstr "טקסט קידומת:"
+
+#: contents/ui/GeneralConfig.qml:153
+msgid "Background rect:"
+msgstr "מלבן רקע:"
+
+#: contents/ui/GeneralConfig.qml:156
+msgid "Glow:"
+msgstr "זוהר:"
+
+#: contents/ui/GeneralConfig.qml:161
+msgid "12 Hour Format"
+msgstr "פורמט 12 שעות"
+
+#: contents/ui/GeneralConfig.qml:165
+msgid "Active Text:"
+msgstr "טקסט פעיל:"
+
+#: contents/ui/GeneralConfig.qml:168
+msgid "Show background rectangle:"
+msgstr "הצג מלבן רקע:"
+
+#: contents/ui/GeneralConfig.qml:172
+msgid "Enable glow:"
+msgstr "הפעל זוהר:"
+
+#: contents/ui/GeneralConfig.qml:176
+msgid "Top overflow (px):"
+msgstr "גלישה עליונה (פיקסלים):"
+
+#: contents/ui/GeneralConfig.qml:180
+msgid "Bottom overflow (px):"
+msgstr "גלישה תחתונה (פיקסלים):"
+
+#: contents/ui/GeneralConfig.qml:183
+msgid "Command on time click:"
+msgstr "פקודה בלחיצה על זמן:"
+
+#: contents/ui/GeneralConfig.qml:184
+msgid "e.g. kalendar, gnome-calendar, thunderbird -calendar"
+msgstr "לדוגמה: kalendar, gnome-calendar, thunderbird -calendar"
+
+#: contents/ui/GeneralConfig.qml:187
+msgid "Custom prefix text:"
+msgstr "טקסט קידומת מותאם אישית:"
+
+#: contents/ui/GeneralConfig.qml:188
+msgid "Leave empty to use auto-detected locale text"
+msgstr "השאר ריק לשימוש בטקסט מקומי שזוהה אוטומטית"
+
+#: contents/ui/GeneralConfig.qml:191
+msgid "Date format:"
+msgstr "פורמט תאריך:"
+
+#: contents/ui/GeneralConfig.qml:192
+msgid "Qt date format (e.g., ddd d M yy, dd/MM/yyyy)"
+msgstr "פורמט תאריך Qt (לדוגמה: ddd d M yy, dd/MM/yyyy)"
+
+#: contents/ui/GeneralConfig.qml:196
+msgid "Disable animations"
+msgstr "השבת אנימציות"
+
+#: contents/ui/GeneralConfig.qml:200
+msgid "Disable colon blink"
+msgstr "השבת הבהוב נקודתיים"
+
+#: contents/ui/GeneralConfig.qml:203
+msgid "Colon blink easing:"
+msgstr "החלקת הבהוב נקודתיים:"
+
+#: contents/config/config.qml:6
+msgid "General"
+msgstr "כללי"

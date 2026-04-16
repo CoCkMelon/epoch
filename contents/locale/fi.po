@@ -1,0 +1,153 @@
+# Finnish translations for Plasma Clock Widget
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-28 19:14+0300\n"
+"PO-Revision-Date: 2026-01-29 11:38+0300\n"
+"Last-Translator: \n"
+"Language-Team: Finnish\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "now"
+msgstr "nyt"
+
+#: contents/ui/main.qml:102
+msgid "Open Date && Time Settings"
+msgstr "Avaa päivämäärä- ja aikaisetukset"
+
+#: contents/ui/main.qml:110
+msgid "Copy Time (HH:MM:SS)"
+msgstr "Kopioi aika (TT:MM:SS)"
+
+#: contents/ui/main.qml:115
+msgid "Copy Time (HH:MM)"
+msgstr "Kopioi aika (TT:MM)"
+
+#: contents/ui/main.qml:120
+msgid "Copy Unix Timestamp"
+msgstr "Kopioi Unix-aikaleima"
+
+#: contents/ui/main.qml:125
+msgid "Copy Date"
+msgstr "Kopioi päivämäärä"
+
+#: contents/ui/main.qml:130
+msgid "Copy ISO Date"
+msgstr "Kopioi ISO-päivämäärä"
+
+#: contents/ui/GeneralConfig.qml:65
+msgid "Pick color from screen"
+msgstr "Valitse väri näytöltä"
+
+#: contents/ui/GeneralConfig.qml:92
+msgid "Reset to default"
+msgstr "Palauta oletukseksi"
+
+#: contents/ui/GeneralConfig.qml:129
+msgid "Hour (top):"
+msgstr "Tunti (ylhäällä):"
+
+#: contents/ui/GeneralConfig.qml:132
+msgid "Hour (bottom):"
+msgstr "Tunti (alhaalla):"
+
+#: contents/ui/GeneralConfig.qml:135
+msgid "Colon:"
+msgstr "Kaksoispiste:"
+
+#: contents/ui/GeneralConfig.qml:138
+msgid "Minute (top):"
+msgstr "Minuutti (ylhäällä):"
+
+#: contents/ui/GeneralConfig.qml:141
+msgid "Minute (bottom):"
+msgstr "Minuutti (alhaalla):"
+
+#: contents/ui/GeneralConfig.qml:144
+msgid "Seconds:"
+msgstr "Sekunnit:"
+
+#: contents/ui/GeneralConfig.qml:147
+msgid "Date:"
+msgstr "Päivämäärä:"
+
+#: contents/ui/GeneralConfig.qml:150
+msgid "Prefix text:"
+msgstr "Etuliiteteksti:"
+
+#: contents/ui/GeneralConfig.qml:153
+msgid "Background rect:"
+msgstr "Taustan suorakulmio:"
+
+#: contents/ui/GeneralConfig.qml:156
+msgid "Glow:"
+msgstr "Hehku:"
+
+#: contents/ui/GeneralConfig.qml:161
+msgid "12 Hour Format"
+msgstr "12-tunnin muoto"
+
+#: contents/ui/GeneralConfig.qml:165
+msgid "Active Text:"
+msgstr "Aktiivinen teksti:"
+
+#: contents/ui/GeneralConfig.qml:168
+msgid "Show background rectangle:"
+msgstr "Näytä taustan suorakulmio:"
+
+#: contents/ui/GeneralConfig.qml:172
+msgid "Enable glow:"
+msgstr "Ota hehku käyttöön:"
+
+#: contents/ui/GeneralConfig.qml:176
+msgid "Top overflow (px):"
+msgstr "Yläylivuoto (px):"
+
+#: contents/ui/GeneralConfig.qml:180
+msgid "Bottom overflow (px):"
+msgstr "Alaylivuoto (px):"
+
+#: contents/ui/GeneralConfig.qml:183
+msgid "Command on time click:"
+msgstr "Komento aikaa napsautettaessa:"
+
+#: contents/ui/GeneralConfig.qml:184
+msgid "e.g. kalendar, gnome-calendar, thunderbird -calendar"
+msgstr "esim. kalendar, gnome-calendar, thunderbird -calendar"
+
+#: contents/ui/GeneralConfig.qml:187
+msgid "Custom prefix text:"
+msgstr "Mukautettu etuliiteteksti:"
+
+#: contents/ui/GeneralConfig.qml:188
+msgid "Leave empty to use auto-detected locale text"
+msgstr "Jätä tyhjäksi käyttääksesi automaattisesti havaittua paikallistekstiä"
+
+#: contents/ui/GeneralConfig.qml:191
+msgid "Date format:"
+msgstr "Päivämäärän muoto:"
+
+#: contents/ui/GeneralConfig.qml:192
+msgid "Qt date format (e.g., ddd d M yy, dd/MM/yyyy)"
+msgstr "Qt-päivämäärän muoto (esim., ddd d M yy, dd/MM/yyyy)"
+
+#: contents/ui/GeneralConfig.qml:196
+msgid "Disable animations"
+msgstr "Poista animaatiot käytöstä"
+
+#: contents/ui/GeneralConfig.qml:200
+msgid "Disable colon blink"
+msgstr "Poista kaksoispisteen vilkkuminen käytöstä"
+
+#: contents/ui/GeneralConfig.qml:203
+msgid "Colon blink easing:"
+msgstr "Kaksoispisteen vilkkumisen pehmennys:"
+
+#: contents/config/config.qml:6
+msgid "General"
+msgstr "Yleiset"
