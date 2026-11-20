@@ -151,3 +151,33 @@ msgstr "Làm mượt nhấp nháy dấu hai chấm:"
 #: contents/config/config.qml:6
 msgid "General"
 msgstr "Chung"
+
+msgid "Anno Domini"
+msgstr "Sau Công Nguyên"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "Từ khi thành lập Roma (AUC)"
+
+msgid "Byzantine era"
+msgstr "Kỷ nguyên Byzantine"
+
+msgid "Reiwa era"
+msgstr "Thời kỳ Reiwa"
+
+msgid "Custom"
+msgstr "Tùy chỉnh"
+
+msgid "Era:"
+msgstr "Kỷ nguyên:"
+
+msgid "Year offset:"
+msgstr "Độ lệch năm:"
+
+msgid "Era label:"
+msgstr "Nhãn kỷ nguyên:"
+
+msgid "e.g. AUC, AD"
+msgstr "ví dụ: AUC, AD"
+
+msgid "Show era label"
+msgstr "Hiển thị nhãn kỷ nguyên"

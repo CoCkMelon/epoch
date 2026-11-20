@@ -16,6 +16,14 @@ trap "rm -rf $BUILD_DIR" EXIT
 cp -r contents "$BUILD_DIR/"
 cp metadata.json "$BUILD_DIR/"
 
+# Compile .po translations into the .mo layout Plasma loads at runtime
+for po in "$BUILD_DIR"/contents/locale/*.po; do
+    [ -e "$po" ] || continue
+    lang=$(basename "$po" .po)
+    mkdir -p "$BUILD_DIR/contents/locale/$lang/LC_MESSAGES"
+    msgfmt -o "$BUILD_DIR/contents/locale/$lang/LC_MESSAGES/plasma_applet_Iridescent.mo" "$po"
+done
+
 # Create the .plasmoid archive (it's just a zip file with .plasmoid extension)
 cd "$BUILD_DIR"
 zip -r "${PACKAGE_NAME}-${VERSION}.plasmoid" contents metadata.json

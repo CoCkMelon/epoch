@@ -151,3 +151,33 @@ msgstr "Kaksoispisteen vilkkumisen pehmennys:"
 #: contents/config/config.qml:6
 msgid "General"
 msgstr "Yleiset"
+
+msgid "Anno Domini"
+msgstr "Jälkeen Kristuksen"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "Rooman perustamisesta (AUC)"
+
+msgid "Byzantine era"
+msgstr "Bysantin ajanlasku"
+
+msgid "Reiwa era"
+msgstr "Reiwa-kausi"
+
+msgid "Custom"
+msgstr "Mukautettu"
+
+msgid "Era:"
+msgstr "Ajanlasku:"
+
+msgid "Year offset:"
+msgstr "Vuosisiirtymä:"
+
+msgid "Era label:"
+msgstr "Ajanlaskun tunniste:"
+
+msgid "e.g. AUC, AD"
+msgstr "esim. AUC, AD"
+
+msgid "Show era label"
+msgstr "Näytä ajanlaskun tunniste"

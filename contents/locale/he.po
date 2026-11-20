@@ -151,3 +151,33 @@ msgstr "החלקת הבהוב נקודתיים:"
 #: contents/config/config.qml:6
 msgid "General"
 msgstr "כללי"
+
+msgid "Anno Domini"
+msgstr "לספירה"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "ממיום ייסוד רומא (AUC)"
+
+msgid "Byzantine era"
+msgstr "התקופה הביזנטית"
+
+msgid "Reiwa era"
+msgstr "תקופת רייווה"
+
+msgid "Custom"
+msgstr "מותאם אישית"
+
+msgid "Era:"
+msgstr "תקופה:"
+
+msgid "Year offset:"
+msgstr "היסט שנה:"
+
+msgid "Era label:"
+msgstr "תווית תקופה:"
+
+msgid "e.g. AUC, AD"
+msgstr "למשל AUC, AD"
+
+msgid "Show era label"
+msgstr "הצג תווית תקופה"

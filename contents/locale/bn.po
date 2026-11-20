@@ -151,3 +151,33 @@ msgstr "কোলন ব্লিঙ্ক ইজিং:"
 #: contents/config/config.qml:6
 msgid "General"
 msgstr "সাধারণ"
+
+msgid "Anno Domini"
+msgstr "খ্রিস্টাব্দ"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "রোম নগর প্রতিষ্ঠা থেকে (AUC)"
+
+msgid "Byzantine era"
+msgstr "বাইজেন্টাইন যুগ"
+
+msgid "Reiwa era"
+msgstr "রেইওয়া যুগ"
+
+msgid "Custom"
+msgstr "কাস্টম"
+
+msgid "Era:"
+msgstr "যুগ:"
+
+msgid "Year offset:"
+msgstr "বছরের অফসেট:"
+
+msgid "Era label:"
+msgstr "যুগের লেবেল:"
+
+msgid "e.g. AUC, AD"
+msgstr "যেমন AUC, AD"
+
+msgid "Show era label"
+msgstr "যুগের লেবেল দেখান"

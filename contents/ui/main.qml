@@ -13,58 +13,42 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
 PlasmoidItem {
     id: root
 
-    property string codeleng: ((Qt.locale().name)[0]+(Qt.locale().name)[1])
     property bool formato12Hour: plasmoid.configuration.hourFormat
     property bool visibleTxt: Plasmoid.configuration.activeText
 
     preferredRepresentation: fullRepresentation
     Plasmoid.backgroundHints: PlasmaCore.Types.ConfigurableBackground
 
-    function desktoptext(languageCode) {
-        const translations = {
-            "en": "now",        // English
-            "es": "ahora",      // Spanish
-            "fr": "maint.",     // French (maintenant)
-            "de": "jetzt",      // German
-            "it": "ora",        // Italian
-            "pt": "agora",      // Portuguese
-            "ru": "ща",         // Russian (сейчас)
-            "uk": "ща",         // Ukrainian
-            "be": "ща",         // Belarusian
-            "pl": "teraz",      // Polish
-            "cs": "nyní",       // Czech
-            "sk": "teraz",      // Slovak
-            "bg": "сега",       // Bulgarian
-            "sr": "сада",       // Serbian
-            "hr": "sada",       // Croatian
-            "sl": "zdaj",       // Slovenian
-            "ro": "acum",       // Romanian
-            "hu": "most",       // Hungarian
-            "tr": "şimdi",      // Turkish
-            "ar": "الآن",       // Arabic
-            "he": "עכשיו",      // Hebrew
-            "fa": "الان",       // Persian
-            "hi": "अब",         // Hindi
-            "bn": "এখন",        // Bengali
-            "ta": "இப்போது",    // Tamil
-            "th": "ตอนนี้",     // Thai
-            "vi": "bây giờ",    // Vietnamese
-            "id": "sekarang",   // Indonesian
-            "ms": "sekarang",   // Malay
-            "tl": "ngayon",     // Tagalog
-            "zh": "现在",        // Chinese
-            "ja": "今",         // Japanese
-            "ko": "지금",        // Korean
-            "nl": "nu",         // Dutch
-            "sv": "nu",         // Swedish
-            "no": "nå",         // Norwegian
-            "da": "nu",         // Danish
-            "fi": "nyt",        // Finnish
-            "el": "τώρα",       // Greek
-            "ka": "ახლა",       // Georgian
-            "hy": "հիմա"        // Armenian
-        };
-        return translations[languageCode] || translations["en"];
+    // Format a date, optionally counting years from another era.
+    function formatDate(d, format) {
+        var fmt = format || plasmoid.configuration.customDateFormat || "ddd d M yy"
+        var offset = plasmoid.configuration.yearOffset || 0
+        var label = plasmoid.configuration.showEraLabel ? (plasmoid.configuration.eraLabel || "") : ""
+        if (offset === 0) {
+            var plain = d.toLocaleString(Qt.locale(), fmt)
+            return label ? plain + " " + label : plain
+        }
+        var match = /y{1,4}/.exec(fmt)
+        if (!match) {
+            var plain2 = d.toLocaleString(Qt.locale(), fmt)
+            return label ? plain2 + " " + label : plain2
+        }
+        var pre = fmt.slice(0, match.index)
+        var post = fmt.slice(match.index + match[0].length)
+        var eraYear = d.getFullYear() + offset
+        var yearText
+        if (match[0].length === 2) {
+            var last = Math.abs(eraYear) % 100
+            yearText = (last < 10 ? "0" : "") + last
+            if (eraYear < 0) {
+                yearText = "-" + yearText
+            }
+        } else {
+            yearText = String(eraYear)
+        }
+        var result = (pre ? d.toLocaleString(Qt.locale(), pre) : "") + yearText
+                + (post ? d.toLocaleString(Qt.locale(), post) : "")
+        return label ? result + " " + label : result
     }
 
     FontLoader {
@@ -124,7 +108,7 @@ PlasmoidItem {
         PlasmaCore.Action {
             text: i18n("Copy Date")
             icon.name: "edit-copy"
-            onTriggered: clipboard.content = Qt.formatDateTime(currentTime, plasmoid.configuration.customDateFormat || "d M yy")
+            onTriggered: clipboard.content = root.formatDate(currentTime, plasmoid.configuration.customDateFormat || "d M yy")
         },
         PlasmaCore.Action {
             text: i18n("Copy ISO Date")
@@ -139,7 +123,7 @@ PlasmoidItem {
         width: plasmoid.width
         height: plasmoid.height
         // Request enough width to fit content, so panel pushes neighbors
-        implicitWidth: timeContainer.width + base.pad * 2
+        implicitWidth: timeRow.width + secondsContainer.width + base.pad * 2
         // Also tell the panel via Layout hints
         Layout.preferredWidth: base.width
         Layout.minimumWidth: base.width
@@ -161,8 +145,8 @@ PlasmoidItem {
         Rectangle {
             id: base
             property int pad: 1
-            // Width accounts for time+seconds and date, use whichever is wider
-            width: Math.max(timeRow.width + segundos.width, dateText.implicitWidth) + pad * 2
+            // Width accounts for the fixed seconds slot and date, use whichever is wider
+            width: Math.max(timeRow.width + secondsContainer.width, dateText.implicitWidth) + pad * 2
             // Height and position include user-configured overflow
             height: mainContainer.height + plasmoid.configuration.overflowTop + plasmoid.configuration.overflowBottom
             radius: height/10
@@ -213,7 +197,7 @@ PlasmoidItem {
                 // Optional prefix text (localized or custom)
                 Text {
                     visible: plasmoid.configuration.activeText
-                    text: plasmoid.configuration.customPrefixText || root.desktoptext(root.codeleng)
+                    text: plasmoid.configuration.customPrefixText || i18n("now")
                     font.pixelSize: hora.font.pixelSize * 0.35
                     font.family: hora.font.family
                     color: plasmoid.configuration.prefixColor
@@ -301,24 +285,36 @@ PlasmoidItem {
             }
         }
         
-        // Seconds as superscript (outside timeContainer so it doesn't affect width)
-        Text {
-            id: segundos
-            property var currentDate: hora.currentDate
-            // Bounce/rotation state
-            property real bounceOffset: 0
-            property int rotSign: 1
-            property int transformOriginValue: Item.TopLeft
-            text: Qt.formatDateTime(currentDate, "ss")
-            font.pixelSize: hora.font.pixelSize * 0.44
-            font.family: hora.font.family
-            font.weight: Font.Bold
-            color: plasmoid.configuration.secondsColor
-            transformOrigin: transformOriginValue
-            rotation: 0
-            // Position relative to timeContainer + timeRow
+        // Seconds as superscript in a fixed-width slot: changing digits never resizes the clock
+        Item {
+            id: secondsContainer
             x: timeContainer.x + timeRow.width
-            y: timeContainer.y + bounceOffset
+            y: timeContainer.y
+            // FontMetrics gives the width of the widest two-digit value without a dummy Text item
+            width: secondsMetrics.advanceWidth("88") + Math.round(hora.font.pixelSize * 0.08)
+            height: segundos.height
+
+            FontMetrics {
+                id: secondsMetrics
+                font: segundos.font
+            }
+
+            Text {
+                id: segundos
+                property var currentDate: hora.currentDate
+                // Bounce/rotation state
+                property real bounceOffset: 0
+                property int rotSign: 1
+                property int transformOriginValue: Item.TopLeft
+                text: Qt.formatDateTime(currentDate, "ss")
+                font.pixelSize: hora.font.pixelSize * 0.44
+                font.family: hora.font.family
+                font.weight: Font.Bold
+                color: plasmoid.configuration.secondsColor
+                transformOrigin: transformOriginValue
+                rotation: 0
+                anchors.left: parent.left
+                y: bounceOffset
 
                 // Spring animations
                 SpringAnimation {
@@ -356,6 +352,7 @@ PlasmoidItem {
                         rotAnim.start()
                     }
                 }
+            }
         }
         
         // Date display centered below time
@@ -364,7 +361,7 @@ PlasmoidItem {
             width: base.width - base.pad * 2
             horizontalAlignment: Text.AlignLeft
             property var currentDate: hora.currentDate
-            text: Qt.formatDateTime(currentDate, plasmoid.configuration.customDateFormat || "ddd d M yy")
+            text: root.formatDate(currentDate)
             font.pixelSize: mainContainer.height * 0.32
             font.family: hora.font.family
             color: plasmoid.configuration.dateColor

@@ -1,4 +1,4 @@
-# Swedish translations for Plasma Clock Widget
+# Swahili translations for Plasma Clock Widget
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -6,148 +6,178 @@ msgstr ""
 "POT-Creation-Date: 2026-01-28 19:14+0300\n"
 "PO-Revision-Date: 2026-01-29 11:38+0300\n"
 "Last-Translator: \n"
-"Language-Team: Swedish\n"
-"Language: sv\n"
+"Language-Team: Swahili\n"
+"Language: sw\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "now"
-msgstr "nu"
+msgstr "sasa"
 
 #: contents/ui/main.qml:102
 msgid "Open Date && Time Settings"
-msgstr "Öppna datum- och tidsinställningar"
+msgstr "Fungua mipangilio ya tarehe na saa"
 
 #: contents/ui/main.qml:110
 msgid "Copy Time (HH:MM:SS)"
-msgstr "Kopiera tid (HH:MM:SS)"
+msgstr "Nakili saa (HH:MM:SS)"
 
 #: contents/ui/main.qml:115
 msgid "Copy Time (HH:MM)"
-msgstr "Kopiera tid (HH:MM)"
+msgstr "Nakili saa (HH:MM)"
 
 #: contents/ui/main.qml:120
 msgid "Copy Unix Timestamp"
-msgstr "Kopiera Unix-tidsstämpel"
+msgstr "Nakili muhuri wa muda wa Unix"
 
 #: contents/ui/main.qml:125
 msgid "Copy Date"
-msgstr "Kopiera datum"
+msgstr "Nakili tarehe"
 
 #: contents/ui/main.qml:130
 msgid "Copy ISO Date"
-msgstr "Kopiera ISO-datum"
+msgstr "Nakili tarehe ya ISO"
 
 #: contents/ui/GeneralConfig.qml:65
 msgid "Pick color from screen"
-msgstr "Välj färg från skärmen"
+msgstr "Chagua rangi kutoka skrini"
 
 #: contents/ui/GeneralConfig.qml:92
 msgid "Reset to default"
-msgstr "Återställ till standard"
+msgstr "Rejesha chaguo-msingi"
 
 #: contents/ui/GeneralConfig.qml:129
 msgid "Hour (top):"
-msgstr "Timme (överst):"
+msgstr "Saa (juu):"
 
 #: contents/ui/GeneralConfig.qml:132
 msgid "Hour (bottom):"
-msgstr "Timme (nederst):"
+msgstr "Saa (chini):"
 
 #: contents/ui/GeneralConfig.qml:135
 msgid "Colon:"
-msgstr "Kolontecken:"
+msgstr "Nukta mbili:"
 
 #: contents/ui/GeneralConfig.qml:138
 msgid "Minute (top):"
-msgstr "Minut (överst):"
+msgstr "Dakika (juu):"
 
 #: contents/ui/GeneralConfig.qml:141
 msgid "Minute (bottom):"
-msgstr "Minut (nederst):"
+msgstr "Dakika (chini):"
 
 #: contents/ui/GeneralConfig.qml:144
 msgid "Seconds:"
-msgstr "Sekunder:"
+msgstr "Sekunde:"
 
 #: contents/ui/GeneralConfig.qml:147
 msgid "Date:"
-msgstr "Datum:"
+msgstr "Tarehe:"
 
 #: contents/ui/GeneralConfig.qml:150
 msgid "Prefix text:"
-msgstr "Prefixtext:"
+msgstr "Maandishi ya kiambishi awali:"
 
 #: contents/ui/GeneralConfig.qml:153
 msgid "Background rect:"
-msgstr "Bakgrundsrektangel:"
+msgstr "Mstatili wa mandhari:"
 
 #: contents/ui/GeneralConfig.qml:156
 msgid "Glow:"
-msgstr "Glöd:"
+msgstr "Mwanga:"
 
 #: contents/ui/GeneralConfig.qml:161
 msgid "12 Hour Format"
-msgstr "12-timmarsformat"
+msgstr "Muundo wa saa 12"
 
 #: contents/ui/GeneralConfig.qml:165
 msgid "Active Text:"
-msgstr "Aktiv text:"
+msgstr "Maandishi amilifu:"
 
 #: contents/ui/GeneralConfig.qml:168
 msgid "Show background rectangle:"
-msgstr "Visa bakgrundsrektangel:"
+msgstr "Onyesha mstatili wa mandhari:"
 
 #: contents/ui/GeneralConfig.qml:172
 msgid "Enable glow:"
-msgstr "Aktivera glöd:"
+msgstr "Washa mwanga:"
 
 #: contents/ui/GeneralConfig.qml:176
 msgid "Top overflow (px):"
-msgstr "Överflöde överst (px):"
+msgstr "Mfululizo wa juu (px):"
 
 #: contents/ui/GeneralConfig.qml:180
 msgid "Bottom overflow (px):"
-msgstr "Överflöde nederst (px):"
+msgstr "Mfululizo wa chini (px):"
 
 #: contents/ui/GeneralConfig.qml:183
 msgid "Command on time click:"
-msgstr "Kommando vid tidklick:"
+msgstr "Amri inapobofya saa:"
 
 #: contents/ui/GeneralConfig.qml:184
 msgid "e.g. kalendar, gnome-calendar, thunderbird -calendar"
-msgstr "t.ex. kalendar, gnome-calendar, thunderbird -calendar"
+msgstr "k.mf. kalendar, gnome-calendar, thunderbird -calendar"
 
 #: contents/ui/GeneralConfig.qml:187
 msgid "Custom prefix text:"
-msgstr "Anpassad prefixtext:"
+msgstr "Maandishi maalum ya kiambishi awali:"
 
 #: contents/ui/GeneralConfig.qml:188
 msgid "Leave empty to use auto-detected locale text"
-msgstr "Lämna tomt för att använda automatiskt upptäckt lokaltext"
+msgstr "Acha tupu ili kutumia maandishi ya lugha yaliyotambuliwa kiotomatiki"
 
 #: contents/ui/GeneralConfig.qml:191
 msgid "Date format:"
-msgstr "Datumformat:"
+msgstr "Muundo wa tarehe:"
 
 #: contents/ui/GeneralConfig.qml:192
 msgid "Qt date format (e.g., ddd d M yy, dd/MM/yyyy)"
-msgstr "Qt-datumformat (t.ex., ddd d M yy, dd/MM/yyyy)"
+msgstr "Muundo wa tarehe wa Qt (k.mf. ddd d M yy, dd/MM/yyyy)"
 
 #: contents/ui/GeneralConfig.qml:196
 msgid "Disable animations"
-msgstr "Inaktivera animationer"
+msgstr "Zima uhuishaji"
 
 #: contents/ui/GeneralConfig.qml:200
 msgid "Disable colon blink"
-msgstr "Inaktivera kolonblinkning"
+msgstr "Zima kumeta kwa nukta mbili"
 
 #: contents/ui/GeneralConfig.qml:203
 msgid "Colon blink easing:"
-msgstr "Kolonblinkningsutjämning:"
+msgstr "Ulainishaji wa kumeta kwa nukta mbili:"
 
 #: contents/config/config.qml:6
 msgid "General"
-msgstr "Allmänt"
+msgstr "Jumla"
+
+msgid "Anno Domini"
+msgstr "Baada ya Kristo"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "Tangu kuanzishwa kwa Roma (AUC)"
+
+msgid "Byzantine era"
+msgstr "Enzi ya Bizanti"
+
+msgid "Reiwa era"
+msgstr "Enzi ya Reiwa"
+
+msgid "Custom"
+msgstr "Maalum"
+
+msgid "Era:"
+msgstr "Enzi:"
+
+msgid "Year offset:"
+msgstr "Urekebishaji wa mwaka:"
+
+msgid "Era label:"
+msgstr "Lebo ya enzi:"
+
+msgid "e.g. AUC, AD"
+msgstr "k.mf. AUC, AD"
+
+msgid "Show era label"
+msgstr "Onyesha lebo ya enzi"

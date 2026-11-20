@@ -1,4 +1,4 @@
-# Armenian translations for Plasma Clock Widget
+# Arabic translations for Plasma Clock Widget
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -6,148 +6,178 @@ msgstr ""
 "POT-Creation-Date: 2026-01-28 19:14+0300\n"
 "PO-Revision-Date: 2026-01-29 11:38+0300\n"
 "Last-Translator: \n"
-"Language-Team: Armenian\n"
-"Language: hy\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "now"
-msgstr "հիմա"
+msgstr "الآن"
 
 #: contents/ui/main.qml:102
 msgid "Open Date && Time Settings"
-msgstr "Բացել ամսաթվի և ժամի կարգավորումները"
+msgstr "فتح إعدادات التاريخ والوقت"
 
 #: contents/ui/main.qml:110
 msgid "Copy Time (HH:MM:SS)"
-msgstr "Պատճենել ժամը (ժժ:րր:վվ)"
+msgstr "نسخ الوقت (HH:MM:SS)"
 
 #: contents/ui/main.qml:115
 msgid "Copy Time (HH:MM)"
-msgstr "Պատճենել ժամը (ժժ:րր)"
+msgstr "نسخ الوقت (HH:MM)"
 
 #: contents/ui/main.qml:120
 msgid "Copy Unix Timestamp"
-msgstr "Պատճենել Unix-ի ժամանակային կնիքը"
+msgstr "نسخ طابع وقت Unix"
 
 #: contents/ui/main.qml:125
 msgid "Copy Date"
-msgstr "Պատճենել ամսաթիվը"
+msgstr "نسخ التاريخ"
 
 #: contents/ui/main.qml:130
 msgid "Copy ISO Date"
-msgstr "Պատճենել ISO ամսաթիվը"
+msgstr "نسخ تاريخ ISO"
 
 #: contents/ui/GeneralConfig.qml:65
 msgid "Pick color from screen"
-msgstr "Ընտրել գույն էկրանից"
+msgstr "اختيار لون من الشاشة"
 
 #: contents/ui/GeneralConfig.qml:92
 msgid "Reset to default"
-msgstr "Վերականգնել լռելյայնը"
+msgstr "إعادة التعيين إلى الافتراضي"
 
 #: contents/ui/GeneralConfig.qml:129
 msgid "Hour (top):"
-msgstr "Ժամ (վերևում):"
+msgstr "الساعة (أعلى):"
 
 #: contents/ui/GeneralConfig.qml:132
 msgid "Hour (bottom):"
-msgstr "Ժամ (ներքևում):"
+msgstr "الساعة (أسفل):"
 
 #: contents/ui/GeneralConfig.qml:135
 msgid "Colon:"
-msgstr "Երկու կետ:"
+msgstr "النقطتان:"
 
 #: contents/ui/GeneralConfig.qml:138
 msgid "Minute (top):"
-msgstr "Րոպե (վերևում):"
+msgstr "الدقيقة (أعلى):"
 
 #: contents/ui/GeneralConfig.qml:141
 msgid "Minute (bottom):"
-msgstr "Րոպե (ներքևում):"
+msgstr "الدقيقة (أسفل):"
 
 #: contents/ui/GeneralConfig.qml:144
 msgid "Seconds:"
-msgstr "Վայրկյան:"
+msgstr "الثواني:"
 
 #: contents/ui/GeneralConfig.qml:147
 msgid "Date:"
-msgstr "Ամսաթիվ:"
+msgstr "التاريخ:"
 
 #: contents/ui/GeneralConfig.qml:150
 msgid "Prefix text:"
-msgstr "Նախածանցի տեքստ:"
+msgstr "نص البادئة:"
 
 #: contents/ui/GeneralConfig.qml:153
 msgid "Background rect:"
-msgstr "Ֆոնի ուղղանկյուն:"
+msgstr "مستطيل الخلفية:"
 
 #: contents/ui/GeneralConfig.qml:156
 msgid "Glow:"
-msgstr "Պայծառացում:"
+msgstr "التوهج:"
 
 #: contents/ui/GeneralConfig.qml:161
 msgid "12 Hour Format"
-msgstr "12-ժամյա ձևաչափ"
+msgstr "تنسيق 12 ساعة"
 
 #: contents/ui/GeneralConfig.qml:165
 msgid "Active Text:"
-msgstr "Ակտիվ տեքստ:"
+msgstr "النص النشط:"
 
 #: contents/ui/GeneralConfig.qml:168
 msgid "Show background rectangle:"
-msgstr "Ցույց տալ ֆոնի ուղղանկյունը:"
+msgstr "إظهار مستطيل الخلفية:"
 
 #: contents/ui/GeneralConfig.qml:172
 msgid "Enable glow:"
-msgstr "Միացնել պայծառացումը:"
+msgstr "تفعيل التوهج:"
 
 #: contents/ui/GeneralConfig.qml:176
 msgid "Top overflow (px):"
-msgstr "Վերևի գերհոսք (px):"
+msgstr "التجاوز العلوي (px):"
 
 #: contents/ui/GeneralConfig.qml:180
 msgid "Bottom overflow (px):"
-msgstr "Ներքևի գերհոսք (px):"
+msgstr "التجاوز السفلي (px):"
 
 #: contents/ui/GeneralConfig.qml:183
 msgid "Command on time click:"
-msgstr "Հրաման ժամի վրա սեղմելիս:"
+msgstr "أمر عند النقر على الوقت:"
 
 #: contents/ui/GeneralConfig.qml:184
 msgid "e.g. kalendar, gnome-calendar, thunderbird -calendar"
-msgstr "օր. kalendar, gnome-calendar, thunderbird -calendar"
+msgstr "مثال: kalendar, gnome-calendar, thunderbird -calendar"
 
 #: contents/ui/GeneralConfig.qml:187
 msgid "Custom prefix text:"
-msgstr "Պատվիրված նախածանցի տեքստ:"
+msgstr "نص بادئة مخصص:"
 
 #: contents/ui/GeneralConfig.qml:188
 msgid "Leave empty to use auto-detected locale text"
-msgstr "Թողեք դատարկ՝ ավտոմատ հայտնաբերված տեղական տեքստն օգտագործելու համար"
+msgstr "اتركه فارغًا لاستخدام نص اللغة المكتشف تلقائيًا"
 
 #: contents/ui/GeneralConfig.qml:191
 msgid "Date format:"
-msgstr "Ամսաթվի ձևաչափ:"
+msgstr "تنسيق التاريخ:"
 
 #: contents/ui/GeneralConfig.qml:192
 msgid "Qt date format (e.g., ddd d M yy, dd/MM/yyyy)"
-msgstr "Qt ամսաթվի ձևաչափ (օր., ddd d M yy, dd/MM/yyyy)"
+msgstr "تنسيق تاريخ Qt (مثال: ddd d M yy, dd/MM/yyyy)"
 
 #: contents/ui/GeneralConfig.qml:196
 msgid "Disable animations"
-msgstr "Անջատել անիմացիաները"
+msgstr "تعطيل الحركات"
 
 #: contents/ui/GeneralConfig.qml:200
 msgid "Disable colon blink"
-msgstr "Անջատել երկու կետի թարթումը"
+msgstr "تعطيل وميض النقطتين"
 
 #: contents/ui/GeneralConfig.qml:203
 msgid "Colon blink easing:"
-msgstr "Երկու կետի թարթման մեղմացում:"
+msgstr "تنعيم وميض النقطتين:"
 
 #: contents/config/config.qml:6
 msgid "General"
-msgstr "Ընդհանուր"
+msgstr "عام"
+
+msgid "Anno Domini"
+msgstr "التقويم الميلادي"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "منذ تأسيس روما (AUC)"
+
+msgid "Byzantine era"
+msgstr "العصر البيزنطي"
+
+msgid "Reiwa era"
+msgstr "عصر ريوا"
+
+msgid "Custom"
+msgstr "مخصص"
+
+msgid "Era:"
+msgstr "العصر:"
+
+msgid "Year offset:"
+msgstr "إزاحة السنة:"
+
+msgid "Era label:"
+msgstr "تسمية العصر:"
+
+msgid "e.g. AUC, AD"
+msgstr "مثال: AUC، AD"
+
+msgid "Show era label"
+msgstr "إظهار تسمية العصر"

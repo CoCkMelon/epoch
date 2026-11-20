@@ -151,3 +151,33 @@ msgstr "காலன் ப்ளிங் ஈசிங்:"
 #: contents/config/config.qml:6
 msgid "General"
 msgstr "பொது"
+
+msgid "Anno Domini"
+msgstr "கி.பி."
+
+msgid "Ab urbe condita (Rome)"
+msgstr "ரோம் நிறுவப்பட்டதிலிருந்து (AUC)"
+
+msgid "Byzantine era"
+msgstr "பைசண்டைன் யுகம்"
+
+msgid "Reiwa era"
+msgstr "ரெய்வா யுகம்"
+
+msgid "Custom"
+msgstr "தனிப்பயன்"
+
+msgid "Era:"
+msgstr "யுகம்:"
+
+msgid "Year offset:"
+msgstr "ஆண்டு இடமாற்றம்:"
+
+msgid "Era label:"
+msgstr "யுக லேபல்:"
+
+msgid "e.g. AUC, AD"
+msgstr "எ.கா. AUC, AD"
+
+msgid "Show era label"
+msgstr "யுக லேபலைக் காட்டு"

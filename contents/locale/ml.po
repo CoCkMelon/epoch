@@ -1,0 +1,183 @@
+# Malayalam translations for Plasma Clock Widget
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-28 19:14+0300\n"
+"PO-Revision-Date: 2026-01-29 11:38+0300\n"
+"Last-Translator: \n"
+"Language-Team: Malayalam\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "now"
+msgstr "ഇപ്പോൾ"
+
+#: contents/ui/main.qml:102
+msgid "Open Date && Time Settings"
+msgstr "തീയതിയും സമയവും ക്രമീകരണങ്ങൾ തുറക്കുക"
+
+#: contents/ui/main.qml:110
+msgid "Copy Time (HH:MM:SS)"
+msgstr "സമയം പകർത്തുക (HH:MM:SS)"
+
+#: contents/ui/main.qml:115
+msgid "Copy Time (HH:MM)"
+msgstr "സമയം പകർത്തുക (HH:MM)"
+
+#: contents/ui/main.qml:120
+msgid "Copy Unix Timestamp"
+msgstr "Unix ടൈംസ്റ്റാംപ് പകർത്തുക"
+
+#: contents/ui/main.qml:125
+msgid "Copy Date"
+msgstr "തീയതി പകർത്തുക"
+
+#: contents/ui/main.qml:130
+msgid "Copy ISO Date"
+msgstr "ISO തീയതി പകർത്തുക"
+
+#: contents/ui/GeneralConfig.qml:65
+msgid "Pick color from screen"
+msgstr "സ്ക്രീനിൽ നിന്ന് നിറം തിരഞ്ഞെടുക്കുക"
+
+#: contents/ui/GeneralConfig.qml:92
+msgid "Reset to default"
+msgstr "സ്വതവേയുള്ളതിലേക്ക് പുനഃസജ്ജമാക്കുക"
+
+#: contents/ui/GeneralConfig.qml:129
+msgid "Hour (top):"
+msgstr "മണിക്കൂർ (മുകളിൽ):"
+
+#: contents/ui/GeneralConfig.qml:132
+msgid "Hour (bottom):"
+msgstr "മണിക്കൂർ (താഴെ):"
+
+#: contents/ui/GeneralConfig.qml:135
+msgid "Colon:"
+msgstr "കോളൻ:"
+
+#: contents/ui/GeneralConfig.qml:138
+msgid "Minute (top):"
+msgstr "മിനിറ്റ് (മുകളിൽ):"
+
+#: contents/ui/GeneralConfig.qml:141
+msgid "Minute (bottom):"
+msgstr "മിനിറ്റ് (താഴെ):"
+
+#: contents/ui/GeneralConfig.qml:144
+msgid "Seconds:"
+msgstr "സെക്കൻഡുകൾ:"
+
+#: contents/ui/GeneralConfig.qml:147
+msgid "Date:"
+msgstr "തീയതി:"
+
+#: contents/ui/GeneralConfig.qml:150
+msgid "Prefix text:"
+msgstr "പ്രിഫിക്സ് വാചകം:"
+
+#: contents/ui/GeneralConfig.qml:153
+msgid "Background rect:"
+msgstr "പശ്ചാത്തല ദീർഘചതുരം:"
+
+#: contents/ui/GeneralConfig.qml:156
+msgid "Glow:"
+msgstr "തിളക്കം:"
+
+#: contents/ui/GeneralConfig.qml:161
+msgid "12 Hour Format"
+msgstr "12 മണിക്കൂർ ഫോർമാറ്റ്"
+
+#: contents/ui/GeneralConfig.qml:165
+msgid "Active Text:"
+msgstr "സജീവ വാചകം:"
+
+#: contents/ui/GeneralConfig.qml:168
+msgid "Show background rectangle:"
+msgstr "പശ്ചാത്തല ദീർഘചതുരം കാണിക്കുക:"
+
+#: contents/ui/GeneralConfig.qml:172
+msgid "Enable glow:"
+msgstr "തിളക്കം പ്രവർത്തനക്ഷമമാക്കുക:"
+
+#: contents/ui/GeneralConfig.qml:176
+msgid "Top overflow (px):"
+msgstr "മുകളിലെ ഓവർഫ്ലോ (px):"
+
+#: contents/ui/GeneralConfig.qml:180
+msgid "Bottom overflow (px):"
+msgstr "താഴെയുള്ള ഓവർഫ്ലോ (px):"
+
+#: contents/ui/GeneralConfig.qml:183
+msgid "Command on time click:"
+msgstr "സമയത്ത് ക്ലിക്ക് ചെയ്യുമ്പോഴുള്ള കമാൻഡ്:"
+
+#: contents/ui/GeneralConfig.qml:184
+msgid "e.g. kalendar, gnome-calendar, thunderbird -calendar"
+msgstr "ഉദാ. kalendar, gnome-calendar, thunderbird -calendar"
+
+#: contents/ui/GeneralConfig.qml:187
+msgid "Custom prefix text:"
+msgstr "ഇഷ്ടാനുസൃത പ്രിഫിക്സ് വാചകം:"
+
+#: contents/ui/GeneralConfig.qml:188
+msgid "Leave empty to use auto-detected locale text"
+msgstr "സ്വയം കണ്ടെത്തിയ ലൊക്കേൽ വാചകം ഉപയോഗിക്കാൻ ശൂന്യമായി വിടുക"
+
+#: contents/ui/GeneralConfig.qml:191
+msgid "Date format:"
+msgstr "തീയതി ഫോർമാറ്റ്:"
+
+#: contents/ui/GeneralConfig.qml:192
+msgid "Qt date format (e.g., ddd d M yy, dd/MM/yyyy)"
+msgstr "Qt തീയതി ഫോർമാറ്റ് (ഉദാ. ddd d M yy, dd/MM/yyyy)"
+
+#: contents/ui/GeneralConfig.qml:196
+msgid "Disable animations"
+msgstr "ആനിമേഷനുകൾ പ്രവർത്തനരഹിതമാക്കുക"
+
+#: contents/ui/GeneralConfig.qml:200
+msgid "Disable colon blink"
+msgstr "കോളൻ ബ്ലിങ്ക് പ്രവർത്തനരഹിതമാക്കുക"
+
+#: contents/ui/GeneralConfig.qml:203
+msgid "Colon blink easing:"
+msgstr "കോളൻ ബ്ലിങ്ക് സുഗമമാക്കൽ:"
+
+#: contents/config/config.qml:6
+msgid "General"
+msgstr "പൊതുവായത്"
+
+msgid "Anno Domini"
+msgstr "ക്രിസ്തുവിനു ശേഷം"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "റോം സ്ഥാപിതമായതു മുതൽ (AUC)"
+
+msgid "Byzantine era"
+msgstr "ബൈസന്റൈൻ കാലഘട്ടം"
+
+msgid "Reiwa era"
+msgstr "റേവാ കാലഘട്ടം"
+
+msgid "Custom"
+msgstr "ഇഷ്ടാനുസൃതം"
+
+msgid "Era:"
+msgstr "കാലഘട്ടം:"
+
+msgid "Year offset:"
+msgstr "വർഷ ഓഫ്സെറ്റ്:"
+
+msgid "Era label:"
+msgstr "കാലഘട്ട ലേബൽ:"
+
+msgid "e.g. AUC, AD"
+msgstr "ഉദാ. AUC, AD"
+
+msgid "Show era label"
+msgstr "കാലഘട്ട ലേബൽ കാണിക്കുക"

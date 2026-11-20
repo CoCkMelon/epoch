@@ -1,0 +1,183 @@
+# Basque translations for Plasma Clock Widget
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-28 19:14+0300\n"
+"PO-Revision-Date: 2026-01-29 11:38+0300\n"
+"Last-Translator: \n"
+"Language-Team: Basque\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "now"
+msgstr "orain"
+
+#: contents/ui/main.qml:102
+msgid "Open Date && Time Settings"
+msgstr "Ireki data eta orduaren ezarpenak"
+
+#: contents/ui/main.qml:110
+msgid "Copy Time (HH:MM:SS)"
+msgstr "Kopiatu ordua (HH:MM:SS)"
+
+#: contents/ui/main.qml:115
+msgid "Copy Time (HH:MM)"
+msgstr "Kopiatu ordua (HH:MM)"
+
+#: contents/ui/main.qml:120
+msgid "Copy Unix Timestamp"
+msgstr "Kopiatu Unix denbora-marka"
+
+#: contents/ui/main.qml:125
+msgid "Copy Date"
+msgstr "Kopiatu data"
+
+#: contents/ui/main.qml:130
+msgid "Copy ISO Date"
+msgstr "Kopiatu ISO data"
+
+#: contents/ui/GeneralConfig.qml:65
+msgid "Pick color from screen"
+msgstr "Aukeratu kolorea pantailatik"
+
+#: contents/ui/GeneralConfig.qml:92
+msgid "Reset to default"
+msgstr "Berrezarri lehenetsia"
+
+#: contents/ui/GeneralConfig.qml:129
+msgid "Hour (top):"
+msgstr "Ordua (goian):"
+
+#: contents/ui/GeneralConfig.qml:132
+msgid "Hour (bottom):"
+msgstr "Ordua (behean):"
+
+#: contents/ui/GeneralConfig.qml:135
+msgid "Colon:"
+msgstr "Bi puntuak:"
+
+#: contents/ui/GeneralConfig.qml:138
+msgid "Minute (top):"
+msgstr "Minutua (goian):"
+
+#: contents/ui/GeneralConfig.qml:141
+msgid "Minute (bottom):"
+msgstr "Minutua (behean):"
+
+#: contents/ui/GeneralConfig.qml:144
+msgid "Seconds:"
+msgstr "Segunduak:"
+
+#: contents/ui/GeneralConfig.qml:147
+msgid "Date:"
+msgstr "Data:"
+
+#: contents/ui/GeneralConfig.qml:150
+msgid "Prefix text:"
+msgstr "Aurrizkiaren testua:"
+
+#: contents/ui/GeneralConfig.qml:153
+msgid "Background rect:"
+msgstr "Atzeko planoaren laukizuzena:"
+
+#: contents/ui/GeneralConfig.qml:156
+msgid "Glow:"
+msgstr "Distira:"
+
+#: contents/ui/GeneralConfig.qml:161
+msgid "12 Hour Format"
+msgstr "12 orduko formatua"
+
+#: contents/ui/GeneralConfig.qml:165
+msgid "Active Text:"
+msgstr "Testu aktiboa:"
+
+#: contents/ui/GeneralConfig.qml:168
+msgid "Show background rectangle:"
+msgstr "Erakutsi atzeko planoaren laukizuzena:"
+
+#: contents/ui/GeneralConfig.qml:172
+msgid "Enable glow:"
+msgstr "Gaitu distira:"
+
+#: contents/ui/GeneralConfig.qml:176
+msgid "Top overflow (px):"
+msgstr "Goiko gainezka (px):"
+
+#: contents/ui/GeneralConfig.qml:180
+msgid "Bottom overflow (px):"
+msgstr "Beheko gainezka (px):"
+
+#: contents/ui/GeneralConfig.qml:183
+msgid "Command on time click:"
+msgstr "Komandoa orduan klik egitean:"
+
+#: contents/ui/GeneralConfig.qml:184
+msgid "e.g. kalendar, gnome-calendar, thunderbird -calendar"
+msgstr "adib. kalendar, gnome-calendar, thunderbird -calendar"
+
+#: contents/ui/GeneralConfig.qml:187
+msgid "Custom prefix text:"
+msgstr "Aurrizki-testu pertsonalizatua:"
+
+#: contents/ui/GeneralConfig.qml:188
+msgid "Leave empty to use auto-detected locale text"
+msgstr "Utzi hutsik detektatutako lokalaren testua erabiltzeko"
+
+#: contents/ui/GeneralConfig.qml:191
+msgid "Date format:"
+msgstr "Data formatua:"
+
+#: contents/ui/GeneralConfig.qml:192
+msgid "Qt date format (e.g., ddd d M yy, dd/MM/yyyy)"
+msgstr "Qt data formatua (adib. ddd d M yy, dd/MM/yyyy)"
+
+#: contents/ui/GeneralConfig.qml:196
+msgid "Disable animations"
+msgstr "Desgaitu animazioak"
+
+#: contents/ui/GeneralConfig.qml:200
+msgid "Disable colon blink"
+msgstr "Desgaitu bi puntuen keinua"
+
+#: contents/ui/GeneralConfig.qml:203
+msgid "Colon blink easing:"
+msgstr "Bi puntuen keinuen leuntzea:"
+
+#: contents/config/config.qml:6
+msgid "General"
+msgstr "Orokorra"
+
+msgid "Anno Domini"
+msgstr "K.o. ondoren"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "Erroma sortu zenetik (AUC)"
+
+msgid "Byzantine era"
+msgstr "Bizantziar aroa"
+
+msgid "Reiwa era"
+msgstr "Reiwa aroa"
+
+msgid "Custom"
+msgstr "Pertsonalizatua"
+
+msgid "Era:"
+msgstr "Aroa:"
+
+msgid "Year offset:"
+msgstr "Urte-desplazamendua:"
+
+msgid "Era label:"
+msgstr "Aro-etiketa:"
+
+msgid "e.g. AUC, AD"
+msgstr "adib. AUC, AD"
+
+msgid "Show era label"
+msgstr "Erakutsi aro-etiketa"

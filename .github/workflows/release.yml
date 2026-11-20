@@ -20,9 +20,15 @@ jobs:
         echo "version=$VERSION" >> $GITHUB_OUTPUT
         echo "package_name=epoch-${VERSION}.plasmoid" >> $GITHUB_OUTPUT
     
+    - name: Install gettext
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gettext
+
     - name: Build plasmoid package
       run: |
-        zip -r epoch-${{ steps.get_version.outputs.version }}.plasmoid contents metadata.json
+        chmod +x build-package.sh
+        ./build-package.sh
     
     - name: Create Release
       uses: softprops/action-gh-release@v1

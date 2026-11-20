@@ -1,0 +1,183 @@
+# Kannada translations for Plasma Clock Widget
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-28 19:14+0300\n"
+"PO-Revision-Date: 2026-01-29 11:38+0300\n"
+"Last-Translator: \n"
+"Language-Team: Kannada\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "now"
+msgstr "ಈಗ"
+
+#: contents/ui/main.qml:102
+msgid "Open Date && Time Settings"
+msgstr "ದಿನಾಂಕ ಮತ್ತು ಸಮಯ ಸೆಟ್ಟಿಂಗ್ಗಳನ್ನು ತೆರೆಯಿರಿ"
+
+#: contents/ui/main.qml:110
+msgid "Copy Time (HH:MM:SS)"
+msgstr "ಸಮಯವನ್ನು ನಕಲಿಸಿ (HH:MM:SS)"
+
+#: contents/ui/main.qml:115
+msgid "Copy Time (HH:MM)"
+msgstr "ಸಮಯವನ್ನು ನಕಲಿಸಿ (HH:MM)"
+
+#: contents/ui/main.qml:120
+msgid "Copy Unix Timestamp"
+msgstr "Unix ಟೈಮ್ಸ್ಟ್ಯಾಂಪ್ ನಕಲಿಸಿ"
+
+#: contents/ui/main.qml:125
+msgid "Copy Date"
+msgstr "ದಿನಾಂಕವನ್ನು ನಕಲಿಸಿ"
+
+#: contents/ui/main.qml:130
+msgid "Copy ISO Date"
+msgstr "ISO ದಿನಾಂಕವನ್ನು ನಕಲಿಸಿ"
+
+#: contents/ui/GeneralConfig.qml:65
+msgid "Pick color from screen"
+msgstr "ಪರದೆಯಿಂದ ಬಣ್ಣ ಆಯ್ಕೆಮಾಡಿ"
+
+#: contents/ui/GeneralConfig.qml:92
+msgid "Reset to default"
+msgstr "ಡೀಫಾಲ್ಟ್ಗೆ ಮರುಹೊಂದಿಸಿ"
+
+#: contents/ui/GeneralConfig.qml:129
+msgid "Hour (top):"
+msgstr "ಗಂಟೆ (ಮೇಲೆ):"
+
+#: contents/ui/GeneralConfig.qml:132
+msgid "Hour (bottom):"
+msgstr "ಗಂಟೆ (ಕೆಳಗೆ):"
+
+#: contents/ui/GeneralConfig.qml:135
+msgid "Colon:"
+msgstr "ಕೋಲನ್:"
+
+#: contents/ui/GeneralConfig.qml:138
+msgid "Minute (top):"
+msgstr "ನಿಮಿಷ (ಮೇಲೆ):"
+
+#: contents/ui/GeneralConfig.qml:141
+msgid "Minute (bottom):"
+msgstr "ನಿಮಿಷ (ಕೆಳಗೆ):"
+
+#: contents/ui/GeneralConfig.qml:144
+msgid "Seconds:"
+msgstr "ಸೆಕೆಂಡ್ಗಳು:"
+
+#: contents/ui/GeneralConfig.qml:147
+msgid "Date:"
+msgstr "ದಿನಾಂಕ:"
+
+#: contents/ui/GeneralConfig.qml:150
+msgid "Prefix text:"
+msgstr "ಪೂರ್ವಪ್ರತ್ಯಯ ಪಠ್ಯ:"
+
+#: contents/ui/GeneralConfig.qml:153
+msgid "Background rect:"
+msgstr "ಹಿನ್ನೆಲೆ ಆಯತ:"
+
+#: contents/ui/GeneralConfig.qml:156
+msgid "Glow:"
+msgstr "ಹೊಳಪು:"
+
+#: contents/ui/GeneralConfig.qml:161
+msgid "12 Hour Format"
+msgstr "12 ಗಂಟೆ ಸ್ವರೂಪ"
+
+#: contents/ui/GeneralConfig.qml:165
+msgid "Active Text:"
+msgstr "ಸಕ್ರಿಯ ಪಠ್ಯ:"
+
+#: contents/ui/GeneralConfig.qml:168
+msgid "Show background rectangle:"
+msgstr "ಹಿನ್ನೆಲೆ ಆಯತವನ್ನು ತೋರಿಸಿ:"
+
+#: contents/ui/GeneralConfig.qml:172
+msgid "Enable glow:"
+msgstr "ಹೊಳಪನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ:"
+
+#: contents/ui/GeneralConfig.qml:176
+msgid "Top overflow (px):"
+msgstr "ಮೇಲಿನ ಓವರ್ಫ್ಲೋ (px):"
+
+#: contents/ui/GeneralConfig.qml:180
+msgid "Bottom overflow (px):"
+msgstr "ಕೆಳಗಿನ ಓವರ್ಫ್ಲೋ (px):"
+
+#: contents/ui/GeneralConfig.qml:183
+msgid "Command on time click:"
+msgstr "ಸಮಯದ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ ಆದೇಶ:"
+
+#: contents/ui/GeneralConfig.qml:184
+msgid "e.g. kalendar, gnome-calendar, thunderbird -calendar"
+msgstr "ಉದಾ. kalendar, gnome-calendar, thunderbird -calendar"
+
+#: contents/ui/GeneralConfig.qml:187
+msgid "Custom prefix text:"
+msgstr "ಕಸ್ಟಮ್ ಪೂರ್ವಪ್ರತ್ಯಯ ಪಠ್ಯ:"
+
+#: contents/ui/GeneralConfig.qml:188
+msgid "Leave empty to use auto-detected locale text"
+msgstr "ಸ್ವಯಂ ಪತ್ತೆಯಾದ ಲೊಕೇಲ್ ಪಠ್ಯವನ್ನು ಬಳಸಲು ಖಾಲಿ ಬಿಡಿ"
+
+#: contents/ui/GeneralConfig.qml:191
+msgid "Date format:"
+msgstr "ದಿನಾಂಕ ಸ್ವರೂಪ:"
+
+#: contents/ui/GeneralConfig.qml:192
+msgid "Qt date format (e.g., ddd d M yy, dd/MM/yyyy)"
+msgstr "Qt ದಿನಾಂಕ ಸ್ವರೂಪ (ಉದಾ. ddd d M yy, dd/MM/yyyy)"
+
+#: contents/ui/GeneralConfig.qml:196
+msgid "Disable animations"
+msgstr "ಅನಿಮೇಷನ್ಗಳನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ"
+
+#: contents/ui/GeneralConfig.qml:200
+msgid "Disable colon blink"
+msgstr "ಕೋಲನ್ ಮಿನುಗುವಿಕೆಯನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ"
+
+#: contents/ui/GeneralConfig.qml:203
+msgid "Colon blink easing:"
+msgstr "ಕೋಲನ್ ಮಿನುಗುವಿಕೆ ಸುಗಮಗೊಳಿಸುವಿಕೆ:"
+
+#: contents/config/config.qml:6
+msgid "General"
+msgstr "ಸಾಮಾನ್ಯ"
+
+msgid "Anno Domini"
+msgstr "ಕ್ರಿಸ್ತ ಶಕ"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "ರೋಮ್ ಸ್ಥಾಪನೆಯಿಂದ (AUC)"
+
+msgid "Byzantine era"
+msgstr "ಬೈಜಾಂಟೈನ್ ಯುಗ"
+
+msgid "Reiwa era"
+msgstr "ರೇವಾ ಯುಗ"
+
+msgid "Custom"
+msgstr "ಕಸ್ಟಮ್"
+
+msgid "Era:"
+msgstr "ಯುಗ:"
+
+msgid "Year offset:"
+msgstr "ವರ್ಷ ಆಫ್ಸೆಟ್:"
+
+msgid "Era label:"
+msgstr "ಯುಗ ಲೇಬಲ್:"
+
+msgid "e.g. AUC, AD"
+msgstr "ಉದಾ. AUC, AD"
+
+msgid "Show era label"
+msgstr "ಯುಗ ಲೇಬಲ್ ತೋರಿಸಿ"

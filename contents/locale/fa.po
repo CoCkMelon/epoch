@@ -151,3 +151,33 @@ msgstr "نرم‌سازی چشمک زدن دو نقطه:"
 #: contents/config/config.qml:6
 msgid "General"
 msgstr "عمومی"
+
+msgid "Anno Domini"
+msgstr "میلادی"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "از بنیان‌گذاری روم (AUC)"
+
+msgid "Byzantine era"
+msgstr "دوره بیزانس"
+
+msgid "Reiwa era"
+msgstr "دوره ریوا"
+
+msgid "Custom"
+msgstr "سفارشی"
+
+msgid "Era:"
+msgstr "دوره:"
+
+msgid "Year offset:"
+msgstr "جابه‌جایی سال:"
+
+msgid "Era label:"
+msgstr "برچسب دوره:"
+
+msgid "e.g. AUC, AD"
+msgstr "مثلاً AUC، AD"
+
+msgid "Show era label"
+msgstr "نمایش برچسب دوره"

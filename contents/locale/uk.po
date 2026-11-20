@@ -1,0 +1,300 @@
+# Ukrainian translations for Plasma Clock Widget
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-28 19:14+0300\n"
+"PO-Revision-Date: 2026-01-29 11:38+0300\n"
+"Last-Translator: \n"
+"Language-Team: Ukrainian\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "now"
+msgstr "ща"
+
+#: contents/ui/main.qml:102
+msgid "Open Date && Time Settings"
+msgstr "Відкрити налаштування дати й часу"
+
+#: contents/ui/main.qml:110
+msgid "Copy Time (HH:MM:SS)"
+msgstr "Копіювати час (ГГ:ХХ:СС)"
+
+#: contents/ui/main.qml:115
+msgid "Copy Time (HH:MM)"
+msgstr "Копіювати час (ГГ:ХХ)"
+
+#: contents/ui/main.qml:120
+msgid "Copy Unix Timestamp"
+msgstr "Копіювати мітку часу Unix"
+
+#: contents/ui/main.qml:125
+msgid "Copy Date"
+msgstr "Копіювати дату"
+
+#: contents/ui/main.qml:130
+msgid "Copy ISO Date"
+msgstr "Копіювати дату ISO"
+
+#: contents/ui/GeneralConfig.qml:65
+msgid "Pick color from screen"
+msgstr "Вибрати колір з екрана"
+
+#: contents/ui/GeneralConfig.qml:92
+msgid "Reset to default"
+msgstr "Скинути до типових"
+
+#: contents/ui/GeneralConfig.qml:129
+msgid "Hour (top):"
+msgstr "Година (зверху):"
+
+#: contents/ui/GeneralConfig.qml:132
+msgid "Hour (bottom):"
+msgstr "Година (знизу):"
+
+#: contents/ui/GeneralConfig.qml:135
+msgid "Colon:"
+msgstr "Двокрапка:"
+
+#: contents/ui/GeneralConfig.qml:138
+msgid "Minute (top):"
+msgstr "Хвилина (зверху):"
+
+#: contents/ui/GeneralConfig.qml:141
+msgid "Minute (bottom):"
+msgstr "Хвилина (знизу):"
+
+#: contents/ui/GeneralConfig.qml:144
+msgid "Seconds:"
+msgstr "Секунди:"
+
+#: contents/ui/GeneralConfig.qml:147
+msgid "Date:"
+msgstr "Дата:"
+
+#: contents/ui/GeneralConfig.qml:150
+msgid "Prefix text:"
+msgstr "Текст префікса:"
+
+#: contents/ui/GeneralConfig.qml:153
+msgid "Background rect:"
+msgstr "Фоновий прямокутник:"
+
+#: contents/ui/GeneralConfig.qml:156
+msgid "Glow:"
+msgstr "Світіння:"
+
+#: contents/ui/GeneralConfig.qml:161
+msgid "12 Hour Format"
+msgstr "12-годинний формат"
+
+#: contents/ui/GeneralConfig.qml:165
+msgid "Active Text:"
+msgstr "Активний текст:"
+
+#: contents/ui/GeneralConfig.qml:168
+msgid "Show background rectangle:"
+msgstr "Показувати фоновий прямокутник:"
+
+#: contents/ui/GeneralConfig.qml:172
+msgid "Enable glow:"
+msgstr "Увімкнути світіння:"
+
+#: contents/ui/GeneralConfig.qml:176
+msgid "Top overflow (px):"
+msgstr "Верхній виступ (px):"
+
+#: contents/ui/GeneralConfig.qml:180
+msgid "Bottom overflow (px):"
+msgstr "Нижній виступ (px):"
+
+#: contents/ui/GeneralConfig.qml:183
+msgid "Command on time click:"
+msgstr "Команда при кліку на час:"
+
+#: contents/ui/GeneralConfig.qml:184
+msgid "e.g. kalendar, gnome-calendar, thunderbird -calendar"
+msgstr "напр. kalendar, gnome-calendar, thunderbird -calendar"
+
+#: contents/ui/GeneralConfig.qml:187
+msgid "Custom prefix text:"
+msgstr "Власний текст префікса:"
+
+#: contents/ui/GeneralConfig.qml:188
+msgid "Leave empty to use auto-detected locale text"
+msgstr "Залиште порожнім для автоматично визначеного тексту локалі"
+
+#: contents/ui/GeneralConfig.qml:191
+msgid "Date format:"
+msgstr "Формат дати:"
+
+#: contents/ui/GeneralConfig.qml:192
+msgid "Qt date format (e.g., ddd d M yy, dd/MM/yyyy)"
+msgstr "Формат дати Qt (напр. ddd d M yy, dd/MM/yyyy)"
+
+#: contents/ui/GeneralConfig.qml:196
+msgid "Disable animations"
+msgstr "Вимкнути анімації"
+
+#: contents/ui/GeneralConfig.qml:200
+msgid "Disable colon blink"
+msgstr "Вимкнути блимання двокрапки"
+
+#: contents/ui/GeneralConfig.qml:203
+msgid "Colon blink easing:"
+msgstr "Плавність блимання двокрапки:"
+
+#: contents/config/config.qml:6
+msgid "General"
+msgstr "Загальні"
+
+msgid "Anno Domini"
+msgstr "Від Різдва Христового"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "Від заснування Рима (AUC)"
+
+msgid "Byzantine era"
+msgstr "Візантійська ера"
+
+msgid "Reiwa era"
+msgstr "Ера Рейва"
+
+msgid "Custom"
+msgstr "Своя"
+
+msgid "Era:"
+msgstr "Ера:"
+
+msgid "Year offset:"
+msgstr "Зсув року:"
+
+msgid "Era label:"
+msgstr "Підпис ери:"
+
+msgid "e.g. AUC, AD"
+msgstr "напр. AUC, AD"
+
+msgid "Show era label"
+msgstr "Показувати підпис ери"
+
+msgid "Hebrew calendar"
+msgstr "Єврейський календар"
+
+msgid "Islamic calendar (Hijri)"
+msgstr "Ісламський календар (хіджра)"
+
+msgid "Persian calendar (Solar Hijri)"
+msgstr "Перський календар (сонячна хіджра)"
+
+msgid "Buddhist calendar (Thai)"
+msgstr "Буддійський календар (тайський)"
+
+msgid "Ethiopian calendar"
+msgstr "Ефіопський календар"
+
+msgid "Coptic calendar"
+msgstr "Коптський календар"
+
+msgid "Bahá'í calendar"
+msgstr "Календар бахаї"
+
+msgid "Vikram Samvat"
+msgstr "Вікрам-самват"
+
+msgid "Saka era"
+msgstr "Ера Сака"
+
+msgid "Kali Yuga"
+msgstr "Калі-юга"
+
+msgid "Nanakshahi calendar"
+msgstr "Календар нанакшахі"
+
+msgid "Seleucid era"
+msgstr "Ера Селевкідів"
+
+msgid "Armenian calendar"
+msgstr "Вірменський календар"
+
+msgid "French Republican calendar"
+msgstr "Французький республіканський календар"
+
+msgid "Masonic era (Anno Lucis)"
+msgstr "Масонська ера (Anno Lucis)"
+
+msgid "Dangi calendar"
+msgstr "Календар Дангі"
+
+msgid "Minguo calendar"
+msgstr "Календар Міньго"
+
+msgid "Juche era"
+msgstr "Ера Чучхе"
+
+msgid "Bengali calendar"
+msgstr "Бенгальський календар"
+
+msgid "Malayalam calendar (Kollam)"
+msgstr "Календар малаялам (Коллам)"
+
+msgid "Burmese calendar"
+msgstr "Бірманський календар"
+
+msgid "Holocene calendar"
+msgstr "Голоценовий календар"
+
+msgid "Unix epoch"
+msgstr "Епоха Unix"
+
+msgid "Discordian calendar (YOLD)"
+msgstr "Дискордіанський календар (YOLD)"
+
+msgid "Assyrian calendar"
+msgstr "Ассирійський календар"
+
+msgid "First Olympiad (776 BC)"
+msgstr "Перша Олімпіада (776 до н. е.)"
+
+msgid "Roman Republic (509 BC)"
+msgstr "Римська республіка (509 до н. е.)"
+
+msgid "Fall of the Western Roman Empire"
+msgstr "Падіння Західної Римської імперії"
+
+msgid "Big Bang"
+msgstr "Великий вибух"
+
+msgid "Formation of the Solar System"
+msgstr "Утворення Сонячної системи"
+
+msgid "Formation of Earth"
+msgstr "Утворення Землі"
+
+msgid "Formation of the Moon"
+msgstr "Утворення Місяця"
+
+msgid "Cambrian explosion"
+msgstr "Кембрійський вибух"
+
+msgid "Permian–Triassic extinction"
+msgstr "Пермсько-тріасове вимирання"
+
+msgid "Chicxulub impact (K-Pg)"
+msgstr "Удар Чикшулуб (K-Pg)"
+
+msgid "Tunguska event"
+msgstr "Тунгуська подія"
+
+msgid "Supernova 1054 (Crab Nebula)"
+msgstr "Наднова 1054 (Крабоподібна туманність)"
+
+msgid "Supernova 1572 (Tycho)"
+msgstr "Наднова 1572 (Тихо)"
+
+msgid "Supernova 1604 (Kepler)"
+msgstr "Наднова 1604 (Кеплер)"

@@ -1,0 +1,183 @@
+# Czech translations for Plasma Clock Widget
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-28 19:14+0300\n"
+"PO-Revision-Date: 2026-01-29 11:38+0300\n"
+"Last-Translator: \n"
+"Language-Team: Czech\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "now"
+msgstr "teď"
+
+#: contents/ui/main.qml:102
+msgid "Open Date && Time Settings"
+msgstr "Otevřít nastavení data a času"
+
+#: contents/ui/main.qml:110
+msgid "Copy Time (HH:MM:SS)"
+msgstr "Kopírovat čas (HH:MM:SS)"
+
+#: contents/ui/main.qml:115
+msgid "Copy Time (HH:MM)"
+msgstr "Kopírovat čas (HH:MM)"
+
+#: contents/ui/main.qml:120
+msgid "Copy Unix Timestamp"
+msgstr "Kopírovat časové razítko Unix"
+
+#: contents/ui/main.qml:125
+msgid "Copy Date"
+msgstr "Kopírovat datum"
+
+#: contents/ui/main.qml:130
+msgid "Copy ISO Date"
+msgstr "Kopírovat datum ISO"
+
+#: contents/ui/GeneralConfig.qml:65
+msgid "Pick color from screen"
+msgstr "Vybrat barvu z obrazovky"
+
+#: contents/ui/GeneralConfig.qml:92
+msgid "Reset to default"
+msgstr "Obnovit výchozí"
+
+#: contents/ui/GeneralConfig.qml:129
+msgid "Hour (top):"
+msgstr "Hodina (nahoře):"
+
+#: contents/ui/GeneralConfig.qml:132
+msgid "Hour (bottom):"
+msgstr "Hodina (dole):"
+
+#: contents/ui/GeneralConfig.qml:135
+msgid "Colon:"
+msgstr "Dvojtečka:"
+
+#: contents/ui/GeneralConfig.qml:138
+msgid "Minute (top):"
+msgstr "Minuta (nahoře):"
+
+#: contents/ui/GeneralConfig.qml:141
+msgid "Minute (bottom):"
+msgstr "Minuta (dole):"
+
+#: contents/ui/GeneralConfig.qml:144
+msgid "Seconds:"
+msgstr "Sekundy:"
+
+#: contents/ui/GeneralConfig.qml:147
+msgid "Date:"
+msgstr "Datum:"
+
+#: contents/ui/GeneralConfig.qml:150
+msgid "Prefix text:"
+msgstr "Text předpony:"
+
+#: contents/ui/GeneralConfig.qml:153
+msgid "Background rect:"
+msgstr "Obdélník pozadí:"
+
+#: contents/ui/GeneralConfig.qml:156
+msgid "Glow:"
+msgstr "Záře:"
+
+#: contents/ui/GeneralConfig.qml:161
+msgid "12 Hour Format"
+msgstr "12hodinový formát"
+
+#: contents/ui/GeneralConfig.qml:165
+msgid "Active Text:"
+msgstr "Aktivní text:"
+
+#: contents/ui/GeneralConfig.qml:168
+msgid "Show background rectangle:"
+msgstr "Zobrazit obdélník pozadí:"
+
+#: contents/ui/GeneralConfig.qml:172
+msgid "Enable glow:"
+msgstr "Zapnout záři:"
+
+#: contents/ui/GeneralConfig.qml:176
+msgid "Top overflow (px):"
+msgstr "Horní přesah (px):"
+
+#: contents/ui/GeneralConfig.qml:180
+msgid "Bottom overflow (px):"
+msgstr "Dolní přesah (px):"
+
+#: contents/ui/GeneralConfig.qml:183
+msgid "Command on time click:"
+msgstr "Příkaz při kliknutí na čas:"
+
+#: contents/ui/GeneralConfig.qml:184
+msgid "e.g. kalendar, gnome-calendar, thunderbird -calendar"
+msgstr "např. kalendar, gnome-calendar, thunderbird -calendar"
+
+#: contents/ui/GeneralConfig.qml:187
+msgid "Custom prefix text:"
+msgstr "Vlastní text předpony:"
+
+#: contents/ui/GeneralConfig.qml:188
+msgid "Leave empty to use auto-detected locale text"
+msgstr "Ponechte prázdné pro automaticky zjištěný text místního nastavení"
+
+#: contents/ui/GeneralConfig.qml:191
+msgid "Date format:"
+msgstr "Formát data:"
+
+#: contents/ui/GeneralConfig.qml:192
+msgid "Qt date format (e.g., ddd d M yy, dd/MM/yyyy)"
+msgstr "Formát data Qt (např. ddd d M yy, dd/MM/yyyy)"
+
+#: contents/ui/GeneralConfig.qml:196
+msgid "Disable animations"
+msgstr "Vypnout animace"
+
+#: contents/ui/GeneralConfig.qml:200
+msgid "Disable colon blink"
+msgstr "Vypnout blikání dvojtečky"
+
+#: contents/ui/GeneralConfig.qml:203
+msgid "Colon blink easing:"
+msgstr "Zjemnění blikání dvojtečky:"
+
+#: contents/config/config.qml:6
+msgid "General"
+msgstr "Obecné"
+
+msgid "Anno Domini"
+msgstr "Našeho letopočtu"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "Od založení Říma (AUC)"
+
+msgid "Byzantine era"
+msgstr "Byzantská éra"
+
+msgid "Reiwa era"
+msgstr "Éra Reiwa"
+
+msgid "Custom"
+msgstr "Vlastní"
+
+msgid "Era:"
+msgstr "Éra:"
+
+msgid "Year offset:"
+msgstr "Posun roku:"
+
+msgid "Era label:"
+msgstr "Popisek éry:"
+
+msgid "e.g. AUC, AD"
+msgstr "např. AUC, AD"
+
+msgid "Show era label"
+msgstr "Zobrazit popisek éry"

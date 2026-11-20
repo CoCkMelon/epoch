@@ -1,0 +1,183 @@
+# Norwegian Nynorsk translations for Plasma Clock Widget
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-28 19:14+0300\n"
+"PO-Revision-Date: 2026-01-29 11:38+0300\n"
+"Last-Translator: \n"
+"Language-Team: Norwegian Nynorsk\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "now"
+msgstr "nå"
+
+#: contents/ui/main.qml:102
+msgid "Open Date && Time Settings"
+msgstr "Opne dato- og tidsinnstillingar"
+
+#: contents/ui/main.qml:110
+msgid "Copy Time (HH:MM:SS)"
+msgstr "Kopier tid (HH:MM:SS)"
+
+#: contents/ui/main.qml:115
+msgid "Copy Time (HH:MM)"
+msgstr "Kopier tid (HH:MM)"
+
+#: contents/ui/main.qml:120
+msgid "Copy Unix Timestamp"
+msgstr "Kopier Unix-tidsstempel"
+
+#: contents/ui/main.qml:125
+msgid "Copy Date"
+msgstr "Kopier dato"
+
+#: contents/ui/main.qml:130
+msgid "Copy ISO Date"
+msgstr "Kopier ISO-dato"
+
+#: contents/ui/GeneralConfig.qml:65
+msgid "Pick color from screen"
+msgstr "Vel farge frå skjermen"
+
+#: contents/ui/GeneralConfig.qml:92
+msgid "Reset to default"
+msgstr "Tilbakestill til standard"
+
+#: contents/ui/GeneralConfig.qml:129
+msgid "Hour (top):"
+msgstr "Time (øvst):"
+
+#: contents/ui/GeneralConfig.qml:132
+msgid "Hour (bottom):"
+msgstr "Time (nedst):"
+
+#: contents/ui/GeneralConfig.qml:135
+msgid "Colon:"
+msgstr "Kolon:"
+
+#: contents/ui/GeneralConfig.qml:138
+msgid "Minute (top):"
+msgstr "Minutt (øvst):"
+
+#: contents/ui/GeneralConfig.qml:141
+msgid "Minute (bottom):"
+msgstr "Minutt (nedst):"
+
+#: contents/ui/GeneralConfig.qml:144
+msgid "Seconds:"
+msgstr "Sekund:"
+
+#: contents/ui/GeneralConfig.qml:147
+msgid "Date:"
+msgstr "Dato:"
+
+#: contents/ui/GeneralConfig.qml:150
+msgid "Prefix text:"
+msgstr "Prefikstekst:"
+
+#: contents/ui/GeneralConfig.qml:153
+msgid "Background rect:"
+msgstr "Bakgrunnsrektangel:"
+
+#: contents/ui/GeneralConfig.qml:156
+msgid "Glow:"
+msgstr "Glød:"
+
+#: contents/ui/GeneralConfig.qml:161
+msgid "12 Hour Format"
+msgstr "12-timars format"
+
+#: contents/ui/GeneralConfig.qml:165
+msgid "Active Text:"
+msgstr "Aktiv tekst:"
+
+#: contents/ui/GeneralConfig.qml:168
+msgid "Show background rectangle:"
+msgstr "Vis bakgrunnsrektangel:"
+
+#: contents/ui/GeneralConfig.qml:172
+msgid "Enable glow:"
+msgstr "Aktiver glød:"
+
+#: contents/ui/GeneralConfig.qml:176
+msgid "Top overflow (px):"
+msgstr "Øvre overflyt (px):"
+
+#: contents/ui/GeneralConfig.qml:180
+msgid "Bottom overflow (px):"
+msgstr "Nedre overflyt (px):"
+
+#: contents/ui/GeneralConfig.qml:183
+msgid "Command on time click:"
+msgstr "Kommando ved klikk på tid:"
+
+#: contents/ui/GeneralConfig.qml:184
+msgid "e.g. kalendar, gnome-calendar, thunderbird -calendar"
+msgstr "t.d. kalendar, gnome-calendar, thunderbird -calendar"
+
+#: contents/ui/GeneralConfig.qml:187
+msgid "Custom prefix text:"
+msgstr "Eigen prefikstekst:"
+
+#: contents/ui/GeneralConfig.qml:188
+msgid "Leave empty to use auto-detected locale text"
+msgstr "La stå tomt for å bruke automatisk oppdaga språktekst"
+
+#: contents/ui/GeneralConfig.qml:191
+msgid "Date format:"
+msgstr "Datoformat:"
+
+#: contents/ui/GeneralConfig.qml:192
+msgid "Qt date format (e.g., ddd d M yy, dd/MM/yyyy)"
+msgstr "Qt-datoformat (t.d. ddd d M yy, dd/MM/yyyy)"
+
+#: contents/ui/GeneralConfig.qml:196
+msgid "Disable animations"
+msgstr "Deaktiver animasjonar"
+
+#: contents/ui/GeneralConfig.qml:200
+msgid "Disable colon blink"
+msgstr "Deaktiver kolonblinking"
+
+#: contents/ui/GeneralConfig.qml:203
+msgid "Colon blink easing:"
+msgstr "Mjukning av kolonblinking:"
+
+#: contents/config/config.qml:6
+msgid "General"
+msgstr "Generelt"
+
+msgid "Anno Domini"
+msgstr "Etter Kristus"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "Frå grunnlegginga av Roma (AUC)"
+
+msgid "Byzantine era"
+msgstr "Bysantinsk æra"
+
+msgid "Reiwa era"
+msgstr "Reiwa-æra"
+
+msgid "Custom"
+msgstr "Tilpassa"
+
+msgid "Era:"
+msgstr "Æra:"
+
+msgid "Year offset:"
+msgstr "Årsforskyving:"
+
+msgid "Era label:"
+msgstr "Æraetikett:"
+
+msgid "e.g. AUC, AD"
+msgstr "t.d. AUC, AD"
+
+msgid "Show era label"
+msgstr "Vis æraetikett"

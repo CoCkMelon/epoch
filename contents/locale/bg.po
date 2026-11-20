@@ -1,0 +1,183 @@
+# Bulgarian translations for Plasma Clock Widget
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-28 19:14+0300\n"
+"PO-Revision-Date: 2026-01-29 11:38+0300\n"
+"Last-Translator: \n"
+"Language-Team: Bulgarian\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "now"
+msgstr "сега"
+
+#: contents/ui/main.qml:102
+msgid "Open Date && Time Settings"
+msgstr "Отваряне на настройките за дата и час"
+
+#: contents/ui/main.qml:110
+msgid "Copy Time (HH:MM:SS)"
+msgstr "Копиране на часа (ЧЧ:ММ:СС)"
+
+#: contents/ui/main.qml:115
+msgid "Copy Time (HH:MM)"
+msgstr "Копиране на часа (ЧЧ:ММ)"
+
+#: contents/ui/main.qml:120
+msgid "Copy Unix Timestamp"
+msgstr "Копиране на времева марка Unix"
+
+#: contents/ui/main.qml:125
+msgid "Copy Date"
+msgstr "Копиране на датата"
+
+#: contents/ui/main.qml:130
+msgid "Copy ISO Date"
+msgstr "Копиране на датата по ISO"
+
+#: contents/ui/GeneralConfig.qml:65
+msgid "Pick color from screen"
+msgstr "Избор на цвят от екрана"
+
+#: contents/ui/GeneralConfig.qml:92
+msgid "Reset to default"
+msgstr "Връщане към стандартните"
+
+#: contents/ui/GeneralConfig.qml:129
+msgid "Hour (top):"
+msgstr "Час (горе):"
+
+#: contents/ui/GeneralConfig.qml:132
+msgid "Hour (bottom):"
+msgstr "Час (долу):"
+
+#: contents/ui/GeneralConfig.qml:135
+msgid "Colon:"
+msgstr "Двоеточие:"
+
+#: contents/ui/GeneralConfig.qml:138
+msgid "Minute (top):"
+msgstr "Минута (горе):"
+
+#: contents/ui/GeneralConfig.qml:141
+msgid "Minute (bottom):"
+msgstr "Минута (долу):"
+
+#: contents/ui/GeneralConfig.qml:144
+msgid "Seconds:"
+msgstr "Секунди:"
+
+#: contents/ui/GeneralConfig.qml:147
+msgid "Date:"
+msgstr "Дата:"
+
+#: contents/ui/GeneralConfig.qml:150
+msgid "Prefix text:"
+msgstr "Текст на префикса:"
+
+#: contents/ui/GeneralConfig.qml:153
+msgid "Background rect:"
+msgstr "Фонов правоъгълник:"
+
+#: contents/ui/GeneralConfig.qml:156
+msgid "Glow:"
+msgstr "Сияние:"
+
+#: contents/ui/GeneralConfig.qml:161
+msgid "12 Hour Format"
+msgstr "12-часов формат"
+
+#: contents/ui/GeneralConfig.qml:165
+msgid "Active Text:"
+msgstr "Активен текст:"
+
+#: contents/ui/GeneralConfig.qml:168
+msgid "Show background rectangle:"
+msgstr "Показване на фоновия правоъгълник:"
+
+#: contents/ui/GeneralConfig.qml:172
+msgid "Enable glow:"
+msgstr "Включване на сиянието:"
+
+#: contents/ui/GeneralConfig.qml:176
+msgid "Top overflow (px):"
+msgstr "Горно надвишаване (px):"
+
+#: contents/ui/GeneralConfig.qml:180
+msgid "Bottom overflow (px):"
+msgstr "Долно надвишаване (px):"
+
+#: contents/ui/GeneralConfig.qml:183
+msgid "Command on time click:"
+msgstr "Команда при клик върху часа:"
+
+#: contents/ui/GeneralConfig.qml:184
+msgid "e.g. kalendar, gnome-calendar, thunderbird -calendar"
+msgstr "напр. kalendar, gnome-calendar, thunderbird -calendar"
+
+#: contents/ui/GeneralConfig.qml:187
+msgid "Custom prefix text:"
+msgstr "Собствен текст на префикса:"
+
+#: contents/ui/GeneralConfig.qml:188
+msgid "Leave empty to use auto-detected locale text"
+msgstr "Оставете празно за автоматично открит текст на езиковата среда"
+
+#: contents/ui/GeneralConfig.qml:191
+msgid "Date format:"
+msgstr "Формат на датата:"
+
+#: contents/ui/GeneralConfig.qml:192
+msgid "Qt date format (e.g., ddd d M yy, dd/MM/yyyy)"
+msgstr "Формат на датата в Qt (напр. ddd d M yy, dd/MM/yyyy)"
+
+#: contents/ui/GeneralConfig.qml:196
+msgid "Disable animations"
+msgstr "Изключване на анимациите"
+
+#: contents/ui/GeneralConfig.qml:200
+msgid "Disable colon blink"
+msgstr "Изключване на мигането на двоеточието"
+
+#: contents/ui/GeneralConfig.qml:203
+msgid "Colon blink easing:"
+msgstr "Плавност на мигането на двоеточието:"
+
+#: contents/config/config.qml:6
+msgid "General"
+msgstr "Общи"
+
+msgid "Anno Domini"
+msgstr "От Рождество Христово"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "От основаването на Рим (AUC)"
+
+msgid "Byzantine era"
+msgstr "Византийска ера"
+
+msgid "Reiwa era"
+msgstr "Ера Рейва"
+
+msgid "Custom"
+msgstr "Собствена"
+
+msgid "Era:"
+msgstr "Ера:"
+
+msgid "Year offset:"
+msgstr "Отместване на годината:"
+
+msgid "Era label:"
+msgstr "Етикет на ерата:"
+
+msgid "e.g. AUC, AD"
+msgstr "напр. AUC, AD"
+
+msgid "Show era label"
+msgstr "Показване на етикета на ерата"

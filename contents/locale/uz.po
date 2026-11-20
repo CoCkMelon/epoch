@@ -1,0 +1,183 @@
+# Uzbek translations for Plasma Clock Widget
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-28 19:14+0300\n"
+"PO-Revision-Date: 2026-01-29 11:38+0300\n"
+"Last-Translator: \n"
+"Language-Team: Uzbek\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "now"
+msgstr "hozir"
+
+#: contents/ui/main.qml:102
+msgid "Open Date && Time Settings"
+msgstr "Sana va vaqt sozlamalarini ochish"
+
+#: contents/ui/main.qml:110
+msgid "Copy Time (HH:MM:SS)"
+msgstr "Vaqtni nusxalash (HH:MM:SS)"
+
+#: contents/ui/main.qml:115
+msgid "Copy Time (HH:MM)"
+msgstr "Vaqtni nusxalash (HH:MM)"
+
+#: contents/ui/main.qml:120
+msgid "Copy Unix Timestamp"
+msgstr "Unix vaqt belgisini nusxalash"
+
+#: contents/ui/main.qml:125
+msgid "Copy Date"
+msgstr "Sanani nusxalash"
+
+#: contents/ui/main.qml:130
+msgid "Copy ISO Date"
+msgstr "ISO sanasini nusxalash"
+
+#: contents/ui/GeneralConfig.qml:65
+msgid "Pick color from screen"
+msgstr "Ekrandan rang tanlash"
+
+#: contents/ui/GeneralConfig.qml:92
+msgid "Reset to default"
+msgstr "Standart holatga qaytarish"
+
+#: contents/ui/GeneralConfig.qml:129
+msgid "Hour (top):"
+msgstr "Soat (yuqori):"
+
+#: contents/ui/GeneralConfig.qml:132
+msgid "Hour (bottom):"
+msgstr "Soat (pastki):"
+
+#: contents/ui/GeneralConfig.qml:135
+msgid "Colon:"
+msgstr "Ikki nuqta:"
+
+#: contents/ui/GeneralConfig.qml:138
+msgid "Minute (top):"
+msgstr "Daqiqa (yuqori):"
+
+#: contents/ui/GeneralConfig.qml:141
+msgid "Minute (bottom):"
+msgstr "Daqiqa (pastki):"
+
+#: contents/ui/GeneralConfig.qml:144
+msgid "Seconds:"
+msgstr "Sekundlar:"
+
+#: contents/ui/GeneralConfig.qml:147
+msgid "Date:"
+msgstr "Sana:"
+
+#: contents/ui/GeneralConfig.qml:150
+msgid "Prefix text:"
+msgstr "Prefiks matni:"
+
+#: contents/ui/GeneralConfig.qml:153
+msgid "Background rect:"
+msgstr "Fon to'rtburchagi:"
+
+#: contents/ui/GeneralConfig.qml:156
+msgid "Glow:"
+msgstr "Yorqinlik:"
+
+#: contents/ui/GeneralConfig.qml:161
+msgid "12 Hour Format"
+msgstr "12 soatlik format"
+
+#: contents/ui/GeneralConfig.qml:165
+msgid "Active Text:"
+msgstr "Faol matn:"
+
+#: contents/ui/GeneralConfig.qml:168
+msgid "Show background rectangle:"
+msgstr "Fon to'rtburchagini ko'rsatish:"
+
+#: contents/ui/GeneralConfig.qml:172
+msgid "Enable glow:"
+msgstr "Yorqinlikni yoqish:"
+
+#: contents/ui/GeneralConfig.qml:176
+msgid "Top overflow (px):"
+msgstr "Yuqori chiqish (px):"
+
+#: contents/ui/GeneralConfig.qml:180
+msgid "Bottom overflow (px):"
+msgstr "Pastki chiqish (px):"
+
+#: contents/ui/GeneralConfig.qml:183
+msgid "Command on time click:"
+msgstr "Vaqt bosilganda buyruq:"
+
+#: contents/ui/GeneralConfig.qml:184
+msgid "e.g. kalendar, gnome-calendar, thunderbird -calendar"
+msgstr "mas. kalendar, gnome-calendar, thunderbird -calendar"
+
+#: contents/ui/GeneralConfig.qml:187
+msgid "Custom prefix text:"
+msgstr "Maxsus prefiks matni:"
+
+#: contents/ui/GeneralConfig.qml:188
+msgid "Leave empty to use auto-detected locale text"
+msgstr "Avtomatik aniqlangan til matnidan foydalanish uchun bo'sh qoldiring"
+
+#: contents/ui/GeneralConfig.qml:191
+msgid "Date format:"
+msgstr "Sana formati:"
+
+#: contents/ui/GeneralConfig.qml:192
+msgid "Qt date format (e.g., ddd d M yy, dd/MM/yyyy)"
+msgstr "Qt sana formati (mas. ddd d M yy, dd/MM/yyyy)"
+
+#: contents/ui/GeneralConfig.qml:196
+msgid "Disable animations"
+msgstr "Animatsiyalarni o'chirish"
+
+#: contents/ui/GeneralConfig.qml:200
+msgid "Disable colon blink"
+msgstr "Ikki nuqta miltillashini o'chirish"
+
+#: contents/ui/GeneralConfig.qml:203
+msgid "Colon blink easing:"
+msgstr "Ikki nuqta miltillashini yumshatish:"
+
+#: contents/config/config.qml:6
+msgid "General"
+msgstr "Umumiy"
+
+msgid "Anno Domini"
+msgstr "Milodiy"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "Rim asos solinganidan (AUC)"
+
+msgid "Byzantine era"
+msgstr "Vizantiya erasi"
+
+msgid "Reiwa era"
+msgstr "Reyva erasi"
+
+msgid "Custom"
+msgstr "Maxsus"
+
+msgid "Era:"
+msgstr "Era:"
+
+msgid "Year offset:"
+msgstr "Yil siljishi:"
+
+msgid "Era label:"
+msgstr "Era yorlig'i:"
+
+msgid "e.g. AUC, AD"
+msgstr "mas. AUC, AD"
+
+msgid "Show era label"
+msgstr "Era yorlig'ini ko'rsatish"

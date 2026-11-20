@@ -151,3 +151,33 @@ msgstr "การเบลอการกระพริบโคลอน:"
 #: contents/config/config.qml:6
 msgid "General"
 msgstr "ทั่วไป"
+
+msgid "Anno Domini"
+msgstr "คริสต์ศักราช"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "นับจากก่อตั้งกรุงโรม (AUC)"
+
+msgid "Byzantine era"
+msgstr "ยุคไบแซนไทน์"
+
+msgid "Reiwa era"
+msgstr "ยุคเรวะ"
+
+msgid "Custom"
+msgstr "กำหนดเอง"
+
+msgid "Era:"
+msgstr "ยุค:"
+
+msgid "Year offset:"
+msgstr "ออฟเซ็ตปี:"
+
+msgid "Era label:"
+msgstr "ป้ายชื่อยุค:"
+
+msgid "e.g. AUC, AD"
+msgstr "เช่น AUC, AD"
+
+msgid "Show era label"
+msgstr "แสดงป้ายชื่อยุค"

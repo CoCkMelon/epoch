@@ -1,0 +1,183 @@
+# Latvian translations for Plasma Clock Widget
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-28 19:14+0300\n"
+"PO-Revision-Date: 2026-01-29 11:38+0300\n"
+"Last-Translator: \n"
+"Language-Team: Latvian\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "now"
+msgstr "tagad"
+
+#: contents/ui/main.qml:102
+msgid "Open Date && Time Settings"
+msgstr "Atvērt datuma un laika iestatījumus"
+
+#: contents/ui/main.qml:110
+msgid "Copy Time (HH:MM:SS)"
+msgstr "Kopēt laiku (HH:MM:SS)"
+
+#: contents/ui/main.qml:115
+msgid "Copy Time (HH:MM)"
+msgstr "Kopēt laiku (HH:MM)"
+
+#: contents/ui/main.qml:120
+msgid "Copy Unix Timestamp"
+msgstr "Kopēt Unix laika zīmogu"
+
+#: contents/ui/main.qml:125
+msgid "Copy Date"
+msgstr "Kopēt datumu"
+
+#: contents/ui/main.qml:130
+msgid "Copy ISO Date"
+msgstr "Kopēt ISO datumu"
+
+#: contents/ui/GeneralConfig.qml:65
+msgid "Pick color from screen"
+msgstr "Izvēlēties krāsu no ekrāna"
+
+#: contents/ui/GeneralConfig.qml:92
+msgid "Reset to default"
+msgstr "Atiestatīt uz noklusējumu"
+
+#: contents/ui/GeneralConfig.qml:129
+msgid "Hour (top):"
+msgstr "Stunda (augšā):"
+
+#: contents/ui/GeneralConfig.qml:132
+msgid "Hour (bottom):"
+msgstr "Stunda (apakšā):"
+
+#: contents/ui/GeneralConfig.qml:135
+msgid "Colon:"
+msgstr "Kols:"
+
+#: contents/ui/GeneralConfig.qml:138
+msgid "Minute (top):"
+msgstr "Minūte (augšā):"
+
+#: contents/ui/GeneralConfig.qml:141
+msgid "Minute (bottom):"
+msgstr "Minūte (apakšā):"
+
+#: contents/ui/GeneralConfig.qml:144
+msgid "Seconds:"
+msgstr "Sekundes:"
+
+#: contents/ui/GeneralConfig.qml:147
+msgid "Date:"
+msgstr "Datums:"
+
+#: contents/ui/GeneralConfig.qml:150
+msgid "Prefix text:"
+msgstr "Prefiksa teksts:"
+
+#: contents/ui/GeneralConfig.qml:153
+msgid "Background rect:"
+msgstr "Fona taisnstūris:"
+
+#: contents/ui/GeneralConfig.qml:156
+msgid "Glow:"
+msgstr "Spīdums:"
+
+#: contents/ui/GeneralConfig.qml:161
+msgid "12 Hour Format"
+msgstr "12 stundu formāts"
+
+#: contents/ui/GeneralConfig.qml:165
+msgid "Active Text:"
+msgstr "Aktīvais teksts:"
+
+#: contents/ui/GeneralConfig.qml:168
+msgid "Show background rectangle:"
+msgstr "Rādīt fona taisnstūri:"
+
+#: contents/ui/GeneralConfig.qml:172
+msgid "Enable glow:"
+msgstr "Iespējot spīdumu:"
+
+#: contents/ui/GeneralConfig.qml:176
+msgid "Top overflow (px):"
+msgstr "Augšējā pārsniegšana (px):"
+
+#: contents/ui/GeneralConfig.qml:180
+msgid "Bottom overflow (px):"
+msgstr "Apakšējā pārsniegšana (px):"
+
+#: contents/ui/GeneralConfig.qml:183
+msgid "Command on time click:"
+msgstr "Komanda, noklikšķinot uz laika:"
+
+#: contents/ui/GeneralConfig.qml:184
+msgid "e.g. kalendar, gnome-calendar, thunderbird -calendar"
+msgstr "piem. kalendar, gnome-calendar, thunderbird -calendar"
+
+#: contents/ui/GeneralConfig.qml:187
+msgid "Custom prefix text:"
+msgstr "Pielāgots prefiksa teksts:"
+
+#: contents/ui/GeneralConfig.qml:188
+msgid "Leave empty to use auto-detected locale text"
+msgstr "Atstāt tukšu, lai lietotu automātiski noteikto lokalizācijas tekstu"
+
+#: contents/ui/GeneralConfig.qml:191
+msgid "Date format:"
+msgstr "Datuma formāts:"
+
+#: contents/ui/GeneralConfig.qml:192
+msgid "Qt date format (e.g., ddd d M yy, dd/MM/yyyy)"
+msgstr "Qt datuma formāts (piem. ddd d M yy, dd/MM/yyyy)"
+
+#: contents/ui/GeneralConfig.qml:196
+msgid "Disable animations"
+msgstr "Atspējot animācijas"
+
+#: contents/ui/GeneralConfig.qml:200
+msgid "Disable colon blink"
+msgstr "Atspējot kola mirgošanu"
+
+#: contents/ui/GeneralConfig.qml:203
+msgid "Colon blink easing:"
+msgstr "Kola mirgošanas mīkstināšana:"
+
+#: contents/config/config.qml:6
+msgid "General"
+msgstr "Vispārīgi"
+
+msgid "Anno Domini"
+msgstr "Pēc Kristus"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "Kopš Romas dibināšanas (AUC)"
+
+msgid "Byzantine era"
+msgstr "Bizantijas ēra"
+
+msgid "Reiwa era"
+msgstr "Reiwa ēra"
+
+msgid "Custom"
+msgstr "Pielāgota"
+
+msgid "Era:"
+msgstr "Ēra:"
+
+msgid "Year offset:"
+msgstr "Gada nobīde:"
+
+msgid "Era label:"
+msgstr "Ēras apzīmējums:"
+
+msgid "e.g. AUC, AD"
+msgstr "piem. AUC, AD"
+
+msgid "Show era label"
+msgstr "Rādīt ēras apzīmējumu"

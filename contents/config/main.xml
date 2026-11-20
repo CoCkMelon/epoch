@@ -67,6 +67,15 @@
     <entry name="customDateFormat" type="string">
       <default>ddd d M yy</default>
     </entry>
+    <entry name="yearOffset" type="Double">
+      <default>0</default>
+    </entry>
+    <entry name="eraLabel" type="string">
+      <default></default>
+    </entry>
+    <entry name="showEraLabel" type="bool">
+      <default>false</default>
+    </entry>
     <entry name="disableAnimations" type="bool">
       <default>false</default>
     </entry>

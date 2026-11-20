@@ -151,3 +151,33 @@ msgstr "Kolonblink udjævning:"
 #: contents/config/config.qml:6
 msgid "General"
 msgstr "Generelt"
+
+msgid "Anno Domini"
+msgstr "Efter Kristi fødsel"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "Fra Roms grundlæggelse (AUC)"
+
+msgid "Byzantine era"
+msgstr "Byzantinsk æra"
+
+msgid "Reiwa era"
+msgstr "Reiwa-æra"
+
+msgid "Custom"
+msgstr "Tilpasset"
+
+msgid "Era:"
+msgstr "Æra:"
+
+msgid "Year offset:"
+msgstr "Årsforskydning:"
+
+msgid "Era label:"
+msgstr "Æramærke:"
+
+msgid "e.g. AUC, AD"
+msgstr "f.eks. AUC, AD"
+
+msgid "Show era label"
+msgstr "Vis æramærke"

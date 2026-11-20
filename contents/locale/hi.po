@@ -151,3 +151,33 @@ msgstr "कोलन ब्लिंक ईज़िंग:"
 #: contents/config/config.qml:6
 msgid "General"
 msgstr "सामान्य"
+
+msgid "Anno Domini"
+msgstr "ईस्वी"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "रोम की स्थापना से (AUC)"
+
+msgid "Byzantine era"
+msgstr "बाइज़ेंटाइन युग"
+
+msgid "Reiwa era"
+msgstr "रीवा युग"
+
+msgid "Custom"
+msgstr "कस्टम"
+
+msgid "Era:"
+msgstr "युग:"
+
+msgid "Year offset:"
+msgstr "वर्ष ऑफ़सेट:"
+
+msgid "Era label:"
+msgstr "युग लेबल:"
+
+msgid "e.g. AUC, AD"
+msgstr "उदा. AUC, AD"
+
+msgid "Show era label"
+msgstr "युग लेबल दिखाएँ"

@@ -1,0 +1,183 @@
+# Catalan translations for Plasma Clock Widget
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-28 19:14+0300\n"
+"PO-Revision-Date: 2026-01-29 11:38+0300\n"
+"Last-Translator: \n"
+"Language-Team: Catalan\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "now"
+msgstr "ara"
+
+#: contents/ui/main.qml:102
+msgid "Open Date && Time Settings"
+msgstr "Obre la configuració de data i hora"
+
+#: contents/ui/main.qml:110
+msgid "Copy Time (HH:MM:SS)"
+msgstr "Copia l'hora (HH:MM:SS)"
+
+#: contents/ui/main.qml:115
+msgid "Copy Time (HH:MM)"
+msgstr "Copia l'hora (HH:MM)"
+
+#: contents/ui/main.qml:120
+msgid "Copy Unix Timestamp"
+msgstr "Copia la marca de temps Unix"
+
+#: contents/ui/main.qml:125
+msgid "Copy Date"
+msgstr "Copia la data"
+
+#: contents/ui/main.qml:130
+msgid "Copy ISO Date"
+msgstr "Copia la data ISO"
+
+#: contents/ui/GeneralConfig.qml:65
+msgid "Pick color from screen"
+msgstr "Tria un color de la pantalla"
+
+#: contents/ui/GeneralConfig.qml:92
+msgid "Reset to default"
+msgstr "Restableix els valors predeterminats"
+
+#: contents/ui/GeneralConfig.qml:129
+msgid "Hour (top):"
+msgstr "Hora (a dalt):"
+
+#: contents/ui/GeneralConfig.qml:132
+msgid "Hour (bottom):"
+msgstr "Hora (a baix):"
+
+#: contents/ui/GeneralConfig.qml:135
+msgid "Colon:"
+msgstr "Dos punts:"
+
+#: contents/ui/GeneralConfig.qml:138
+msgid "Minute (top):"
+msgstr "Minut (a dalt):"
+
+#: contents/ui/GeneralConfig.qml:141
+msgid "Minute (bottom):"
+msgstr "Minut (a baix):"
+
+#: contents/ui/GeneralConfig.qml:144
+msgid "Seconds:"
+msgstr "Segons:"
+
+#: contents/ui/GeneralConfig.qml:147
+msgid "Date:"
+msgstr "Data:"
+
+#: contents/ui/GeneralConfig.qml:150
+msgid "Prefix text:"
+msgstr "Text del prefix:"
+
+#: contents/ui/GeneralConfig.qml:153
+msgid "Background rect:"
+msgstr "Rectangle de fons:"
+
+#: contents/ui/GeneralConfig.qml:156
+msgid "Glow:"
+msgstr "Resplendor:"
+
+#: contents/ui/GeneralConfig.qml:161
+msgid "12 Hour Format"
+msgstr "Format de 12 hores"
+
+#: contents/ui/GeneralConfig.qml:165
+msgid "Active Text:"
+msgstr "Text actiu:"
+
+#: contents/ui/GeneralConfig.qml:168
+msgid "Show background rectangle:"
+msgstr "Mostra el rectangle de fons:"
+
+#: contents/ui/GeneralConfig.qml:172
+msgid "Enable glow:"
+msgstr "Activa el resplendor:"
+
+#: contents/ui/GeneralConfig.qml:176
+msgid "Top overflow (px):"
+msgstr "Desbordament superior (px):"
+
+#: contents/ui/GeneralConfig.qml:180
+msgid "Bottom overflow (px):"
+msgstr "Desbordament inferior (px):"
+
+#: contents/ui/GeneralConfig.qml:183
+msgid "Command on time click:"
+msgstr "Ordre en clicar l'hora:"
+
+#: contents/ui/GeneralConfig.qml:184
+msgid "e.g. kalendar, gnome-calendar, thunderbird -calendar"
+msgstr "p. ex. kalendar, gnome-calendar, thunderbird -calendar"
+
+#: contents/ui/GeneralConfig.qml:187
+msgid "Custom prefix text:"
+msgstr "Text de prefix personalitzat:"
+
+#: contents/ui/GeneralConfig.qml:188
+msgid "Leave empty to use auto-detected locale text"
+msgstr "Deixa-ho buit per utilitzar el text de la configuració regional detectada"
+
+#: contents/ui/GeneralConfig.qml:191
+msgid "Date format:"
+msgstr "Format de data:"
+
+#: contents/ui/GeneralConfig.qml:192
+msgid "Qt date format (e.g., ddd d M yy, dd/MM/yyyy)"
+msgstr "Format de data Qt (p. ex. ddd d M yy, dd/MM/yyyy)"
+
+#: contents/ui/GeneralConfig.qml:196
+msgid "Disable animations"
+msgstr "Desactiva les animacions"
+
+#: contents/ui/GeneralConfig.qml:200
+msgid "Disable colon blink"
+msgstr "Desactiva el parpelleig dels dos punts"
+
+#: contents/ui/GeneralConfig.qml:203
+msgid "Colon blink easing:"
+msgstr "Suavitzat del parpelleig dels dos punts:"
+
+#: contents/config/config.qml:6
+msgid "General"
+msgstr "General"
+
+msgid "Anno Domini"
+msgstr "Després de Crist"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "Des de la fundació de Roma (AUC)"
+
+msgid "Byzantine era"
+msgstr "Època bizantina"
+
+msgid "Reiwa era"
+msgstr "Era Reiwa"
+
+msgid "Custom"
+msgstr "Personalitzat"
+
+msgid "Era:"
+msgstr "Època:"
+
+msgid "Year offset:"
+msgstr "Desplaçament d'any:"
+
+msgid "Era label:"
+msgstr "Etiqueta d'època:"
+
+msgid "e.g. AUC, AD"
+msgstr "p. ex. AUC, AD"
+
+msgid "Show era label"
+msgstr "Mostra l'etiqueta d'època"

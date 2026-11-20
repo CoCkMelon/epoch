@@ -32,6 +32,81 @@ Item {
     property alias cfg_disableAnimations: disableAnimations.checked
     property alias cfg_disableColonBlink: disableColonBlink.checked
     property alias cfg_colonBlinkEasing: colonBlinkEasing.currentIndex
+    property real cfg_yearOffset: 0
+    property alias cfg_eraLabel: eraLabel.text
+    property alias cfg_showEraLabel: showEraLabel.checked
+
+    // Ready-made era presets. Add your own { name, label, offset } entries here:
+    // "offset" is added to the Gregorian year, "label" is shown after the date.
+    // offset: null means "Custom" (use whatever offset/label are typed below).
+    property var eraPresets: [
+        { name: i18n("Anno Domini"), label: "AD", offset: 0 },
+        { name: i18n("Ab urbe condita (Rome)"), label: "AUC", offset: 753 },
+        { name: i18n("Byzantine era"), label: "AM", offset: 5508 },
+        { name: i18n("Reiwa era"), label: "R", offset: -2018 },
+        { name: i18n("Hebrew calendar"), label: "HE", offset: 3760 },
+        { name: i18n("Islamic calendar (Hijri)"), label: "AH", offset: -579 },
+        { name: i18n("Persian calendar (Solar Hijri)"), label: "SH", offset: -622 },
+        { name: i18n("Buddhist calendar (Thai)"), label: "BE", offset: 543 },
+        { name: i18n("Ethiopian calendar"), label: "EC", offset: -8 },
+        { name: i18n("Coptic calendar"), label: "Coptic", offset: -284 },
+        { name: i18n("Bahá'í calendar"), label: "B.E.", offset: -1844 },
+        { name: i18n("Vikram Samvat"), label: "VS", offset: 57 },
+        { name: i18n("Saka era"), label: "Saka", offset: -78 },
+        { name: i18n("Kali Yuga"), label: "KY", offset: 3102 },
+        { name: i18n("Nanakshahi calendar"), label: "NS", offset: -1468 },
+        { name: i18n("Seleucid era"), label: "SE", offset: 311 },
+        { name: i18n("Armenian calendar"), label: "AMT", offset: -551 },
+        { name: i18n("French Republican calendar"), label: "An", offset: -1792 },
+        { name: i18n("Masonic era (Anno Lucis)"), label: "AL", offset: 4000 },
+        { name: i18n("Dangi calendar"), label: "Dangi", offset: 2333 },
+        { name: i18n("Minguo calendar"), label: "Minguo", offset: -1911 },
+        { name: i18n("Juche era"), label: "Juche", offset: -1911 },
+        { name: i18n("Bengali calendar"), label: "BS", offset: -594 },
+        { name: i18n("Malayalam calendar (Kollam)"), label: "KE", offset: -825 },
+        { name: i18n("Burmese calendar"), label: "ME", offset: -638 },
+        { name: i18n("Holocene calendar"), label: "Holo", offset: 10000 },
+        { name: i18n("Unix epoch"), label: "Unix", offset: -1970 },
+        { name: i18n("Discordian calendar (YOLD)"), label: "YOLD", offset: 1166 },
+        { name: i18n("Assyrian calendar"), label: "AE", offset: 4750 },
+        { name: i18n("First Olympiad (776 BC)"), label: "Olympiad", offset: 776 },
+        { name: i18n("Roman Republic (509 BC)"), label: "Republic", offset: 509 },
+        { name: i18n("Fall of the Western Roman Empire"), label: "Rome", offset: -476 },
+        { name: i18n("Big Bang"), label: "BB", offset: 13787000000 },
+        { name: i18n("Formation of the Solar System"), label: "SS", offset: 4567000000 },
+        { name: i18n("Formation of Earth"), label: "Earth", offset: 4540000000 },
+        { name: i18n("Formation of the Moon"), label: "Moon", offset: 4510000000 },
+        { name: i18n("Cambrian explosion"), label: "Cambrian", offset: 538800000 },
+        { name: i18n("Permian–Triassic extinction"), label: "P-T", offset: 251900000 },
+        { name: i18n("Chicxulub impact (K-Pg)"), label: "K-Pg", offset: 66043000 },
+        { name: i18n("Tunguska event"), label: "Tunguska", offset: -1908 },
+        { name: i18n("Supernova 1054 (Crab Nebula)"), label: "SN1054", offset: -1054 },
+        { name: i18n("Supernova 1572 (Tycho)"), label: "SN1572", offset: -1572 },
+        { name: i18n("Supernova 1604 (Kepler)"), label: "SN1604", offset: -1604 },
+        { name: i18n("Custom"), label: "", offset: null }
+    ]
+
+    function syncEraPreset() {
+        if (!eraPreset || !eraPresets || !eraLabel) return
+        for (var i = 0; i < eraPresets.length; i++) {
+            if (eraPresets[i].offset !== null && eraPresets[i].offset === cfg_yearOffset
+                    && eraPresets[i].label === eraLabel.text) {
+                eraPreset.currentIndex = i
+                return
+            }
+        }
+        eraPreset.currentIndex = eraPresets.length - 1
+    }
+
+    function formatOffset(v) {
+        return String(Math.trunc(Number(v)))
+    }
+
+    function parseOffset(t) {
+        var cleaned = String(t).replace(/[^0-9-]/g, "")
+        var v = Number(cleaned)
+        return isNaN(v) ? 0 : v
+    }
 
     component ColorButton: Row {
         property string configProp
@@ -190,6 +265,62 @@ Item {
             // Custom date format
             Label { Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Date format:") }
             TextField { id: customDateFormat; placeholderText: i18n("Qt date format (e.g., ddd d M yy, dd/MM/yyyy)"); onEditingFinished: configRoot.configurationChanged() }
+
+            // Era preset
+            Label { Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Era:") }
+            ComboBox {
+                id: eraPreset
+                Layout.fillWidth: true
+                textRole: "name"
+                model: configRoot.eraPresets
+                Component.onCompleted: configRoot.syncEraPreset()
+                onActivated: function(index) {
+                    var p = configRoot.eraPresets[index]
+                    if (p && p.offset !== null) {
+                        configRoot.cfg_yearOffset = p.offset
+                        yearOffset.text = configRoot.formatOffset(p.offset)
+                        eraLabel.text = p.label
+                    }
+                    eraPreset.currentIndex = index
+                    configRoot.configurationChanged()
+                }
+            }
+
+            // Year offset
+            Label { Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Year offset:") }
+            TextField {
+                id: yearOffset
+                Layout.fillWidth: true
+                inputMethodHints: Qt.ImhDigitsOnly
+                validator: RegularExpressionValidator { regularExpression: /^-?[0-9\s\u00A0\u202F]{1,24}$/ }
+                Component.onCompleted: text = configRoot.formatOffset(configRoot.cfg_yearOffset)
+                onEditingFinished: {
+                    configRoot.cfg_yearOffset = configRoot.parseOffset(text)
+                    text = configRoot.formatOffset(configRoot.cfg_yearOffset)
+                    configRoot.syncEraPreset()
+                    configRoot.configurationChanged()
+                }
+            }
+
+            // Era label
+            Label { Layout.minimumWidth: configRoot.width/2; horizontalAlignment: Text.AlignRight; text: i18n("Era label:") }
+            TextField {
+                id: eraLabel
+                Layout.fillWidth: true
+                placeholderText: i18n("e.g. AUC, AD")
+                onEditingFinished: {
+                    configRoot.configurationChanged()
+                    configRoot.syncEraPreset()
+                }
+            }
+
+            // Show era label
+            Label { Layout.minimumWidth: configRoot.width/2 }
+            CheckBox {
+                id: showEraLabel
+                text: i18n("Show era label")
+                onToggled: configRoot.configurationChanged()
+            }
 
             // Disable animations
             Label { Layout.minimumWidth: configRoot.width/2 }

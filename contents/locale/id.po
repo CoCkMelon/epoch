@@ -151,3 +151,33 @@ msgstr "Peredaman kedip titik dua:"
 #: contents/config/config.qml:6
 msgid "General"
 msgstr "Umum"
+
+msgid "Anno Domini"
+msgstr "Masehi"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "Sejak berdirinya Roma (AUC)"
+
+msgid "Byzantine era"
+msgstr "Era Bizantium"
+
+msgid "Reiwa era"
+msgstr "Era Reiwa"
+
+msgid "Custom"
+msgstr "Kustom"
+
+msgid "Era:"
+msgstr "Era:"
+
+msgid "Year offset:"
+msgstr "Offset tahun:"
+
+msgid "Era label:"
+msgstr "Label era:"
+
+msgid "e.g. AUC, AD"
+msgstr "mis. AUC, AD"
+
+msgid "Show era label"
+msgstr "Tampilkan label era"

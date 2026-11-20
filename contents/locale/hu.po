@@ -1,0 +1,183 @@
+# Hungarian translations for Plasma Clock Widget
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-28 19:14+0300\n"
+"PO-Revision-Date: 2026-01-29 11:38+0300\n"
+"Last-Translator: \n"
+"Language-Team: Hungarian\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "now"
+msgstr "most"
+
+#: contents/ui/main.qml:102
+msgid "Open Date && Time Settings"
+msgstr "Dátum- és időbeállítások megnyitása"
+
+#: contents/ui/main.qml:110
+msgid "Copy Time (HH:MM:SS)"
+msgstr "Idő másolása (HH:MM:SS)"
+
+#: contents/ui/main.qml:115
+msgid "Copy Time (HH:MM)"
+msgstr "Idő másolása (HH:MM)"
+
+#: contents/ui/main.qml:120
+msgid "Copy Unix Timestamp"
+msgstr "Unix időbélyeg másolása"
+
+#: contents/ui/main.qml:125
+msgid "Copy Date"
+msgstr "Dátum másolása"
+
+#: contents/ui/main.qml:130
+msgid "Copy ISO Date"
+msgstr "ISO dátum másolása"
+
+#: contents/ui/GeneralConfig.qml:65
+msgid "Pick color from screen"
+msgstr "Szín választása a képernyőről"
+
+#: contents/ui/GeneralConfig.qml:92
+msgid "Reset to default"
+msgstr "Visszaállítás alapértelmezettre"
+
+#: contents/ui/GeneralConfig.qml:129
+msgid "Hour (top):"
+msgstr "Óra (fent):"
+
+#: contents/ui/GeneralConfig.qml:132
+msgid "Hour (bottom):"
+msgstr "Óra (lent):"
+
+#: contents/ui/GeneralConfig.qml:135
+msgid "Colon:"
+msgstr "Kettőspont:"
+
+#: contents/ui/GeneralConfig.qml:138
+msgid "Minute (top):"
+msgstr "Perc (fent):"
+
+#: contents/ui/GeneralConfig.qml:141
+msgid "Minute (bottom):"
+msgstr "Perc (lent):"
+
+#: contents/ui/GeneralConfig.qml:144
+msgid "Seconds:"
+msgstr "Másodpercek:"
+
+#: contents/ui/GeneralConfig.qml:147
+msgid "Date:"
+msgstr "Dátum:"
+
+#: contents/ui/GeneralConfig.qml:150
+msgid "Prefix text:"
+msgstr "Előtag szövege:"
+
+#: contents/ui/GeneralConfig.qml:153
+msgid "Background rect:"
+msgstr "Háttér téglalap:"
+
+#: contents/ui/GeneralConfig.qml:156
+msgid "Glow:"
+msgstr "Izzás:"
+
+#: contents/ui/GeneralConfig.qml:161
+msgid "12 Hour Format"
+msgstr "12 órás formátum"
+
+#: contents/ui/GeneralConfig.qml:165
+msgid "Active Text:"
+msgstr "Aktív szöveg:"
+
+#: contents/ui/GeneralConfig.qml:168
+msgid "Show background rectangle:"
+msgstr "Háttér téglalap megjelenítése:"
+
+#: contents/ui/GeneralConfig.qml:172
+msgid "Enable glow:"
+msgstr "Izzás engedélyezése:"
+
+#: contents/ui/GeneralConfig.qml:176
+msgid "Top overflow (px):"
+msgstr "Felső túlnyúlás (px):"
+
+#: contents/ui/GeneralConfig.qml:180
+msgid "Bottom overflow (px):"
+msgstr "Alsó túlnyúlás (px):"
+
+#: contents/ui/GeneralConfig.qml:183
+msgid "Command on time click:"
+msgstr "Parancs az időre kattintva:"
+
+#: contents/ui/GeneralConfig.qml:184
+msgid "e.g. kalendar, gnome-calendar, thunderbird -calendar"
+msgstr "pl. kalendar, gnome-calendar, thunderbird -calendar"
+
+#: contents/ui/GeneralConfig.qml:187
+msgid "Custom prefix text:"
+msgstr "Egyéni előtag szöveg:"
+
+#: contents/ui/GeneralConfig.qml:188
+msgid "Leave empty to use auto-detected locale text"
+msgstr "Hagyja üresen az automatikusan észlelt nyelvi szöveg használatához"
+
+#: contents/ui/GeneralConfig.qml:191
+msgid "Date format:"
+msgstr "Dátumformátum:"
+
+#: contents/ui/GeneralConfig.qml:192
+msgid "Qt date format (e.g., ddd d M yy, dd/MM/yyyy)"
+msgstr "Qt dátumformátum (pl. ddd d M yy, dd/MM/yyyy)"
+
+#: contents/ui/GeneralConfig.qml:196
+msgid "Disable animations"
+msgstr "Animációk letiltása"
+
+#: contents/ui/GeneralConfig.qml:200
+msgid "Disable colon blink"
+msgstr "Kettőspont villogásának letiltása"
+
+#: contents/ui/GeneralConfig.qml:203
+msgid "Colon blink easing:"
+msgstr "Kettőspont villogásának lágyítása:"
+
+#: contents/config/config.qml:6
+msgid "General"
+msgstr "Általános"
+
+msgid "Anno Domini"
+msgstr "Krisztus után"
+
+msgid "Ab urbe condita (Rome)"
+msgstr "Róma alapításától (AUC)"
+
+msgid "Byzantine era"
+msgstr "Bizánci időszámítás"
+
+msgid "Reiwa era"
+msgstr "Reiwa-korszak"
+
+msgid "Custom"
+msgstr "Egyéni"
+
+msgid "Era:"
+msgstr "Korszak:"
+
+msgid "Year offset:"
+msgstr "Éveltolás:"
+
+msgid "Era label:"
+msgstr "Korszak címkéje:"
+
+msgid "e.g. AUC, AD"
+msgstr "pl. AUC, AD"
+
+msgid "Show era label"
+msgstr "Korszak címkéjének megjelenítése"
