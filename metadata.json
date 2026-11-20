@@ -7,7 +7,7 @@
                 "Name": "Dharam Dhurandhar"
             }
         ],
-        "Name": "Iridescent",
+        "Name": "Iridescent For Panel",
         "Id": "Iridescent",
         "Description": "Stylish digital clock with customizable colors and gradients",
         "Category": "Date and Time",
@@ -17,7 +17,7 @@
         "ServiceTypes": [
             "Plasma/Applet"
         ],
-        "Version": "3.0",
+        "Version": "3.0.1",
         "Website": "https://store.kde.org/p/2136299/"
     },
     "X-Plasma-API-Minimum-Version": "6.0",
