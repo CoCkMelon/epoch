@@ -8,7 +8,7 @@
             }
         ],
         "Name": "Iridescent For Panel",
-        "Id": "Iridescent",
+        "Id": "IridescentClockForPanel",
         "Description": "Stylish digital clock with customizable colors and gradients",
         "Category": "Date and Time",
         "Icon": "clock",
@@ -17,7 +17,7 @@
         "ServiceTypes": [
             "Plasma/Applet"
         ],
-        "Version": "3.0.1",
+        "Version": "3.0.2",
         "Website": "https://store.kde.org/p/2136299/"
     },
     "X-Plasma-API-Minimum-Version": "6.0",

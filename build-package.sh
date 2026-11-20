@@ -21,7 +21,7 @@ for po in "$BUILD_DIR"/contents/locale/*.po; do
     [ -e "$po" ] || continue
     lang=$(basename "$po" .po)
     mkdir -p "$BUILD_DIR/contents/locale/$lang/LC_MESSAGES"
-    msgfmt -o "$BUILD_DIR/contents/locale/$lang/LC_MESSAGES/plasma_applet_Iridescent.mo" "$po"
+    msgfmt -o "$BUILD_DIR/contents/locale/$lang/LC_MESSAGES/plasma_applet_IridescentClockForPanel.mo" "$po"
 done
 
 # Create the .plasmoid archive (it's just a zip file with .plasmoid extension)
